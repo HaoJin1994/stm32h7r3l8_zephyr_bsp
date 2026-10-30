@@ -1,0 +1,59 @@
+cmake:
+  application:
+    configuration-dir: '/home/ubuntu/work/aknw_h7rsx/hello_world'
+    source-dir: '/home/ubuntu/work/aknw_h7rsx/hello_world'
+  board:
+    name: 'aknw_stm32h7r3'
+    path:
+     - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3'
+    qualifiers: 'stm32h7r3xx/ext_flash_app'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/ubuntu/work/zephyr/zephyr/dts/bindings'
+    files:
+     - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app.dts'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/app.overlay'
+    include-dirs:
+     - '/home/ubuntu/work/zephyr/modules/hal/ambiq/dts'
+     - '/home/ubuntu/work/zephyr/modules/hal/atmel/include'
+     - '/home/ubuntu/work/zephyr/modules/hal/bouffalolab/include'
+     - '/home/ubuntu/work/zephyr/modules/hal/bouffalolab/include/zephyr'
+     - '/home/ubuntu/work/zephyr/modules/hal/gigadevice/include'
+     - '/home/ubuntu/work/zephyr/modules/hal/infineon/dts'
+     - '/home/ubuntu/work/zephyr/modules/hal/microchip/include'
+     - '/home/ubuntu/work/zephyr/modules/hal/microchip/dts'
+     - '/home/ubuntu/work/zephyr/modules/hal/nuvoton/dts'
+     - '/home/ubuntu/work/zephyr/modules/hal/nxp/dts'
+     - '/home/ubuntu/work/zephyr/modules/hal/stm32/dts'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/include'
+     - '/home/ubuntu/work/zephyr/zephyr/include'
+     - '/home/ubuntu/work/zephyr/zephyr/include/zephyr'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/common'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/vendor'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/rx'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/x86'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/xtensa'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/sparc'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/riscv'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/posix'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/arm64'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/arm'
+     - '/home/ubuntu/work/zephyr/zephyr/dts/arc'
+     - '/home/ubuntu/work/zephyr/zephyr/dts'
+    user-files:
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/app.overlay'
+  kconfig:
+    files:
+     - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app_defconfig'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/prj.conf'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/.config.sysbuild'
+    user-files:
+     - 'prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.4.99'
+    zephyr-base: '/home/ubuntu/work/zephyr/zephyr'
+version: '0.1.0'

@@ -1,0 +1,10 @@
+config MODULE_PWM
+    bool "Enable PWM support"
+    default n
+    help
+        PWM support is required for PWM devices.
+
+
+
+
+        

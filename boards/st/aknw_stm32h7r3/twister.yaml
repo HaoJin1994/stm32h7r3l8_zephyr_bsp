@@ -1,0 +1,38 @@
+name: ST AKNW STM32H7R3 
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+supported:
+  - gpio
+  - ptp_clock
+  - uart
+  - watchdog
+  - dma
+  - entropy
+  - adc
+  - octospi
+  - can
+  - canfd
+  - netif:eth
+  - rtc
+  - usbd
+vendor: st
+variants:
+  aknw_stm32h7r3l8/stm32h7r3xx:
+    twister: true
+    ram: 456
+    flash: 64
+  aknw_stm32h7r3l8/stm32h7r3xx/ext_flash_app:
+    sysbuild: true
+    ram: 456
+    flash: 8191  # size in kB of 1 app slot minus MCUboot header size (1KB)
+    testing:
+      ignore_tags:
+        - arch
+        - arm
+        - clib
+        - cpp
+        - kernel
+        - posix
+        - cmsis-dsp

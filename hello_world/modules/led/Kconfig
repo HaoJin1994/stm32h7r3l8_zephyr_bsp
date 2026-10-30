@@ -1,0 +1,4 @@
+config MODULE_LED
+    bool "Enable LED support"
+    default n
+    depends on GPIO

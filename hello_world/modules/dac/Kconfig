@@ -1,0 +1,4 @@
+config MODULE_DAC
+    bool "Enable DAC device support"
+    default n
+    depends on DAC

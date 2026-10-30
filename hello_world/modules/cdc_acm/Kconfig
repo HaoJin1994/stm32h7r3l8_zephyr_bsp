@@ -1,0 +1,4 @@
+config MODULE_CDC_ACM
+    bool "Enable CDC ACM device support"
+    default n
+    depends on USB_DEVICE_STACK && USB_CDC_ACM && UART_LINE_CTRL

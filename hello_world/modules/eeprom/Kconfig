@@ -1,0 +1,4 @@
+config MODULE_EEPROM
+	bool "I2C EEPROM Module"
+	default n
+    depends on I2C && EEPROM_AT24

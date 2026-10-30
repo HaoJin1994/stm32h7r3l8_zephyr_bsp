@@ -1,0 +1,13 @@
+/ {
+
+    sram_app: memory@24010000 {
+        compatible = "zephyr,memory-region";
+        reg = <0x24010000 DT_SIZE_K(320)>;
+        zephyr,memory-region = "SRAM_APP";
+    };
+
+
+    chosen {
+        zephyr,sram = &sram_app;
+    };
+};

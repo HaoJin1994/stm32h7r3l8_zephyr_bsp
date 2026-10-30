@@ -1,0 +1,12 @@
+# 应用根目录的 Kconfig
+mainmenu "My Application Configuration"
+
+#rsource "modules/led/Kconfig"
+#rsource "modules/cdc_acm/Kconfig"
+#rsource "modules/pwm/Kconfig"
+#rsource "modules/spi_flash/Kconfig"
+#rsource "modules/eeprom/Kconfig"
+#rsource "modules/adc/Kconfig"
+#rsource "modules/dac/Kconfig"
+
+source "Kconfig.zephyr"

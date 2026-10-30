@@ -1,0 +1,141 @@
+menu "acpica (/home/ubuntu/work/zephyr/modules/lib/acpica)"
+osource "$(ZEPHYR_ACPICA_KCONFIG)"
+config ZEPHYR_ACPICA_MODULE
+	bool
+	default y
+endmenu
+menu "cmsis (/home/ubuntu/work/zephyr/modules/hal/cmsis)"
+osource "$(ZEPHYR_CMSIS_KCONFIG)"
+config ZEPHYR_CMSIS_MODULE
+	bool
+	default y
+endmenu
+menu "cmsis-dsp (/home/ubuntu/work/zephyr/modules/lib/cmsis-dsp)"
+osource "/home/ubuntu/work/zephyr/modules/lib/cmsis-dsp/zephyr/Kconfig"
+config ZEPHYR_CMSIS_DSP_MODULE
+	bool
+	default y
+endmenu
+menu "cmsis-nn (/home/ubuntu/work/zephyr/modules/lib/cmsis-nn)"
+osource "$(ZEPHYR_CMSIS_NN_KCONFIG)"
+config ZEPHYR_CMSIS_NN_MODULE
+	bool
+	default y
+endmenu
+menu "cmsis_6 (/home/ubuntu/work/zephyr/modules/hal/cmsis_6)"
+osource "$(ZEPHYR_CMSIS_6_KCONFIG)"
+config ZEPHYR_CMSIS_6_MODULE
+	bool
+	default y
+endmenu
+menu "dhara (/home/ubuntu/work/zephyr/modules/lib/dhara)"
+osource "$(ZEPHYR_DHARA_KCONFIG)"
+config ZEPHYR_DHARA_MODULE
+	bool
+	default y
+endmenu
+menu "fatfs (/home/ubuntu/work/zephyr/modules/fs/fatfs)"
+osource "$(ZEPHYR_FATFS_KCONFIG)"
+config ZEPHYR_FATFS_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_ADI_MODULE
+	bool
+	default y
+menu "hal_afbr (/home/ubuntu/work/zephyr/modules/hal/afbr)"
+osource "$(ZEPHYR_HAL_AFBR_KCONFIG)"
+config ZEPHYR_HAL_AFBR_MODULE
+	bool
+	default y
+
+config ZEPHYR_HAL_AFBR_MODULE_BLOBS
+	bool
+endmenu
+menu "hal_ambiq (/home/ubuntu/work/zephyr/modules/hal/ambiq)"
+osource "$(ZEPHYR_HAL_AMBIQ_KCONFIG)"
+config ZEPHYR_HAL_AMBIQ_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_ATMEL_MODULE
+	bool
+	default y
+menu "hal_bouffalolab (/home/ubuntu/work/zephyr/modules/hal/bouffalolab)"
+osource "$(ZEPHYR_HAL_BOUFFALOLAB_KCONFIG)"
+config ZEPHYR_HAL_BOUFFALOLAB_MODULE
+	bool
+	default y
+
+config ZEPHYR_HAL_BOUFFALOLAB_MODULE_BLOBS
+	bool
+endmenu
+menu "hal_ethos_u (/home/ubuntu/work/zephyr/modules/hal/ethos_u)"
+osource "$(ZEPHYR_HAL_ETHOS_U_KCONFIG)"
+config ZEPHYR_HAL_ETHOS_U_MODULE
+	bool
+	default y
+endmenu
+menu "hal_gigadevice (/home/ubuntu/work/zephyr/modules/hal/gigadevice)"
+osource "$(ZEPHYR_HAL_GIGADEVICE_KCONFIG)"
+config ZEPHYR_HAL_GIGADEVICE_MODULE
+	bool
+	default y
+endmenu
+menu "hal_infineon (/home/ubuntu/work/zephyr/modules/hal/infineon)"
+osource "$(ZEPHYR_HAL_INFINEON_KCONFIG)"
+config ZEPHYR_HAL_INFINEON_MODULE
+	bool
+	default y
+
+config ZEPHYR_HAL_INFINEON_MODULE_BLOBS
+	bool
+endmenu
+menu "hal_intel (/home/ubuntu/work/zephyr/modules/hal/intel)"
+osource "/home/ubuntu/work/zephyr/modules/hal/intel/zephyr/Kconfig"
+config ZEPHYR_HAL_INTEL_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_HAL_MICROCHIP_MODULE
+	bool
+	default y
+
+config ZEPHYR_HAL_MICROCHIP_MODULE_BLOBS
+	bool
+config ZEPHYR_NUVOTON_MODULE
+	bool
+	default y
+menu "hal_nxp (/home/ubuntu/work/zephyr/modules/hal/nxp)"
+osource "$(ZEPHYR_HAL_NXP_KCONFIG)"
+config ZEPHYR_HAL_NXP_MODULE
+	bool
+	default y
+
+config ZEPHYR_HAL_NXP_MODULE_BLOBS
+	bool
+endmenu
+config ZEPHYR_OPENISA_MODULE
+	bool
+	default y
+config ZEPHYR_HAL_STM32_MODULE
+	bool
+	default y
+
+config ZEPHYR_HAL_STM32_MODULE_BLOBS
+	bool
+menu "littlefs (/home/ubuntu/work/zephyr/modules/fs/littlefs)"
+osource "$(ZEPHYR_LITTLEFS_KCONFIG)"
+config ZEPHYR_LITTLEFS_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_MCUBOOT_MODULE
+	bool
+	default y
+menu "zcbor (/home/ubuntu/work/zephyr/modules/lib/zcbor)"
+osource "$(ZEPHYR_ZCBOR_KCONFIG)"
+config ZEPHYR_ZCBOR_MODULE
+	bool
+	default y
+endmenu

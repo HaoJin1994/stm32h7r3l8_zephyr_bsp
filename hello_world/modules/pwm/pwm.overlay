@@ -1,0 +1,22 @@
+&timers14 {
+    status = "okay";
+
+    pwm14: pwm {
+        status = "okay";
+        pinctrl-0 = <&tim14_ch1_pf9>;
+        pinctrl-names = "default";
+    };
+};
+
+/{
+    pwmleds: pwmleds {
+        compatible = "pwm-leds";
+        status = "okay";
+        red_pwm_led: red_pwm_led {
+            pwms = <&pwm14 1 PWM_USEC(100) PWM_POLARITY_INVERTED>;
+        };
+    };
+};
+
+
+

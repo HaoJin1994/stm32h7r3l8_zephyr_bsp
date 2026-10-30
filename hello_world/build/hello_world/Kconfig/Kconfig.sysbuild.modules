@@ -1,0 +1,72 @@
+config ZEPHYR_ACPICA_MODULE
+   bool
+   default y
+config ZEPHYR_CMSIS_MODULE
+   bool
+   default y
+config ZEPHYR_CMSIS_DSP_MODULE
+   bool
+   default y
+config ZEPHYR_CMSIS_NN_MODULE
+   bool
+   default y
+config ZEPHYR_CMSIS_6_MODULE
+   bool
+   default y
+config ZEPHYR_DHARA_MODULE
+   bool
+   default y
+config ZEPHYR_FATFS_MODULE
+   bool
+   default y
+config ZEPHYR_ADI_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_AFBR_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_AMBIQ_MODULE
+   bool
+   default y
+config ZEPHYR_ATMEL_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_BOUFFALOLAB_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_ETHOS_U_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_GIGADEVICE_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_INFINEON_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_INTEL_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_MICROCHIP_MODULE
+   bool
+   default y
+config ZEPHYR_NUVOTON_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_NXP_MODULE
+   bool
+   default y
+config ZEPHYR_OPENISA_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_STM32_MODULE
+   bool
+   default y
+config ZEPHYR_LITTLEFS_MODULE
+   bool
+   default y
+config ZEPHYR_MCUBOOT_MODULE
+   bool
+   default y
+config ZEPHYR_ZCBOR_MODULE
+   bool
+   default y

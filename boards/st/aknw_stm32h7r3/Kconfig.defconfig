@@ -1,0 +1,12 @@
+# STM32H7S3L8 NUCLEO board configuration
+#
+# Copyright (c) 2024 STMicroelectronics
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_AKNW_STM32H7R3
+
+configdefault ETH_DRIVER
+	default y
+
+endif # BOARD_AKNW_STM32H7R3

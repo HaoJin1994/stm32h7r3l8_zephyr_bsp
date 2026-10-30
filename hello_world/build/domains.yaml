@@ -1,0 +1,10 @@
+default: hello_world
+build_dir: /home/ubuntu/work/aknw_h7rsx/hello_world/build
+domains:
+  - name: hello_world
+    build_dir: /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world
+  - name: mcuboot
+    build_dir: /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot
+flash_order:
+  - mcuboot
+  - hello_world

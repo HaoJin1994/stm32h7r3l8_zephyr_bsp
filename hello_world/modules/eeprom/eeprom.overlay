@@ -1,0 +1,14 @@
+&i2c1 {
+    pinctrl-0 = <&i2c1_scl_pb8 &i2c1_sda_pb9>;
+    pinctrl-names = "default";
+    status = "okay";
+    eeprom@50 {
+        reg = <0x50>;
+        size = <256>;
+        compatible = "atmel,at24";
+        status = "okay";
+        pagesize= <8>;
+        address-width = <8>;
+        timeout = <100>;
+    };
+};

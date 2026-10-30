@@ -1,0 +1,146 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:22 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
+      - "/snap/bin/"
+      - "/home/ubuntu/.local/bin/"
+      - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
+    searched_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/uname"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/uname"
+      - "/snap/bin/uname"
+      - "/home/ubuntu/.local/bin/uname"
+      - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
+        - "/snap/bin"
+        - "/snap/bin"
+        - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
+        - "/home/ubuntu/.local/bin"
+        - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:22 (project)"
+    message: |
+      The system is: Linux - 6.8.0-138-generic - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:22 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Program used to build from build.ninja files."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ninja-build"
+      - "ninja"
+      - "samu"
+    candidate_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
+      - "/snap/bin/"
+      - "/home/ubuntu/.local/bin/"
+      - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
+    searched_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/ninja-build"
+      - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/ninja"
+      - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/samu"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/ninja-build"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/ninja"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/samu"
+      - "/snap/bin/ninja-build"
+      - "/snap/bin/ninja"
+      - "/snap/bin/samu"
+      - "/home/ubuntu/.local/bin/ninja-build"
+      - "/home/ubuntu/.local/bin/ninja"
+      - "/home/ubuntu/.local/bin/samu"
+      - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/ninja-build"
+      - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/ninja"
+      - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/samu"
+      - "/usr/local/sbin/ninja-build"
+      - "/usr/local/sbin/ninja"
+      - "/usr/local/sbin/samu"
+      - "/usr/local/bin/ninja-build"
+    found: "/usr/local/bin/ninja"
+    search_context:
+      ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
+        - "/snap/bin"
+        - "/snap/bin"
+        - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
+        - "/home/ubuntu/.local/bin"
+        - "/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
+...

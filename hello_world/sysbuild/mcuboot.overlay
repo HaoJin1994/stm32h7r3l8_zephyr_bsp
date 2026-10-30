@@ -1,0 +1,11 @@
+/* sysbuild/mcuboot.overlay */
+
+/ {
+    chosen {
+
+        zephyr,code-partition = &boot_partition;
+        zephyr,flash-controller = &flash; 
+        zephyr,flash = &flash0; 
+    };
+};
+

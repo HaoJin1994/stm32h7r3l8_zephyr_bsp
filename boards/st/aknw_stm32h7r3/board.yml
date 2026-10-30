@@ -1,0 +1,8 @@
+board:
+  name: aknw_stm32h7r3
+  full_name: STM32H7R3 AKNW
+  vendor: st
+  socs:
+    - name: stm32h7r3xx
+      variants:
+        - name: ext_flash_app

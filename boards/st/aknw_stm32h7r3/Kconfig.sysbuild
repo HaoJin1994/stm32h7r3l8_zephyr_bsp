@@ -1,0 +1,15 @@
+# Copyright (c) 2024-2025 STMicroelectronics
+# Copyright (c) 2025 JB-Lighting Lichtanlagentechnik
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_AKNW_STM32H7R3_STM32H7R3XX_EXT_FLASH_APP
+
+choice BOOTLOADER
+	default BOOTLOADER_MCUBOOT
+endchoice
+
+choice BOOT_SIGNATURE_TYPE
+	default BOOT_SIGNATURE_TYPE_NONE
+endchoice
+
+endif # BOARD_AKNW_STM32H7R3_STM32H7R3XX_EXT_FLASH_APP

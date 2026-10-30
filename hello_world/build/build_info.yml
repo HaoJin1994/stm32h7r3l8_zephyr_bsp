@@ -1,0 +1,28 @@
+cmake:
+  application:
+    source-dir: '/home/ubuntu/work/zephyr/zephyr/share/sysbuild'
+  board:
+    name: 'aknw_stm32h7r3'
+    path:
+     - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3'
+    qualifiers: 'stm32h7r3xx/ext_flash_app'
+    revision: ''
+  images:
+   - name: 'hello_world'
+     source-dir: '/home/ubuntu/work/aknw_h7rsx/hello_world'
+     type: 'MAIN'
+   - name: 'mcuboot'
+     source-dir: '/home/ubuntu/work/zephyr/bootloader/mcuboot/boot/zephyr'
+     type: 'BOOTLOADER'
+  kconfig:
+    files:
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/empty.conf'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild.conf'
+    user-files:
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild.conf'
+  sysbuild: 'true'
+version: '0.1.0'
+west:
+  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b aknw_stm32h7r3/stm32h7r3xx/ext_flash_app --sysbuild -p always -- -DBOARD_ROOT=/home/ubuntu/work/aknw_h7rsx/ -DDTC_OVERLAY_FILE= -DCONF_FILE=prj.conf'
+  topdir: '/home/ubuntu/work/zephyr'
+  version: '1.5.0'

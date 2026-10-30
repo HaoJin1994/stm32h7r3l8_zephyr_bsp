@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/CMakeFiles/hello_world"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/CMakeFiles/hello_world.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/CMakeFiles/hello_world-complete.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/hello_world-prefix/src/hello_world-stamp/hello_world-build.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/hello_world-prefix/src/hello_world-stamp/hello_world-configure.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/hello_world-prefix/src/hello_world-stamp/hello_world-download.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/hello_world-prefix/src/hello_world-stamp/hello_world-install.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/hello_world-prefix/src/hello_world-stamp/hello_world-mkdir.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/hello_world-prefix/src/hello_world-stamp/hello_world-patch.rule"
+		},
+		{
+			"file" : "/home/ubuntu/work/aknw_h7rsx/hello_world/build/_sysbuild/sysbuild/images/hello_world-prefix/src/hello_world-stamp/hello_world-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"hello_world"
+		],
+		"name" : "hello_world"
+	}
+}

@@ -1,0 +1,6 @@
+config MODULE_SPI_FLASH
+    bool "Enable SPI flash support"
+    default n
+    depends on SPI_NOR
+    help
+        SPI flash support is required for SPI flash devices.

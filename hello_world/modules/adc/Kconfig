@@ -1,0 +1,6 @@
+config MODULE_ADC
+    bool "ADC Module"
+    default n
+    depends on ADC
+    help
+        ADC module for Zephyr

@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/Kconfig.aknw_stm32h7r3"

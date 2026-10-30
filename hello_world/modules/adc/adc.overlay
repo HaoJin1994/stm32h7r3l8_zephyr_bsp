@@ -1,0 +1,24 @@
+
+/ {
+	zephyr,user {
+		io-channels = <&adc1 5>;
+	};
+};
+
+&adc1 {
+    #address-cells = <1>;
+	#size-cells = <0>;
+    pinctrl-0 = <&adc1_in5_pa5>;
+    pinctrl-names = "default";
+    status = "okay";
+    st,adc-prescaler = <4>;  // 添加预分频器配置
+    
+	channel@5 {
+		
+        reg = <5>;
+		zephyr,gain = "ADC_GAIN_1"; //1倍增
+		zephyr,reference = "ADC_REF_INTERNAL";//内部参考
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;//默认128个时钟周期
+		zephyr,resolution = <8>;//8位分辨率
+	};
+};
