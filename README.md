@@ -4,7 +4,7 @@
 - 由于64KB用户FLASH对于一般的软件开发不够用，故需要使用到片外FLASH。
 ### 1.2 烧录片外FLASH
   - 根据 ST STM32H7 -SEGGRER Knowledge Base：https://kb.segger.com/ST_STM32H7#QSPI_Support 中，与内部 Flash 相比，QSPI Flash 的编程（烧录）需要特殊处理，J-Link 支持 STM32H7 的多种引脚配置。默认加载器以粗体显示，具体如下图，换句话说，只要QSPI/XSPI是按照下面的io口来连接，便可以通过JLink直接进行烧录。
-  ![alt text](b5e24ea00ddd626d68d91fe7c6f35c49.png)
+  ![alt text](docs/images/b5e24ea00ddd626d68d91fe7c6f35c49.png)
  - 本开发板中，FLASH的使用的IO为表格中的配置2，故可以通过一下命令进行烧录
 ```
 JLinkExe -device "STM32H7R3L8?BankAddr=0x90000000&Loader=CLK@PO4_nCS@PO0_D0@PP0_D1@PP1_D2@PP2_D3@PP3_D4@NA_D5@NA_D6@NA_D7@NA" -if SWD -speed 4000
@@ -29,7 +29,7 @@ c
 ### 2.1 board目录
 #### 2.1.1 defconfig
 - 本board命令为aknw_stm32h7r3，具体目录如下：
-  ![alt text](3317ae09bd45608b91b3cd32e0338bcd.png)
+  ![alt text](docs/images/3317ae09bd45608b91b3cd32e0338bcd.png)
 - board中存在两个不同的配置defconfig，定义了两种变体：
 	- aknw_stm32h7r3_defconfig只用片内flash，对应设备树aknw_stm32h7r3.dts,编译时，使用：
 	```
@@ -43,7 +43,7 @@ c
 aknw_stm32h7r3-common.dtsi设备树定义了整个board的外设，基本可以按照官方开发板的配置（修改pinctrl），主要修改点如下（除修改pinctrl外）： 
  1. pwr节点
 	- 根据原理图，该板使用的是SMPS电源，而非LDO,此处需要修改,具体配置可查看：https://docs.zephyrproject.org/latest/build/dts/api/bindings/power/st%2Cstm32h7rs-pwr.html#std-dtcompatible-st-stm32h7rs-pwr
-   ![alt text](8d42e53bb73621f3d8166bfb589286ad.png)
+   ![alt text](docs/images/8d42e53bb73621f3d8166bfb589286ad.png)
    
 ```dts
 &pwr {
@@ -51,16 +51,16 @@ aknw_stm32h7r3-common.dtsi设备树定义了整个board的外设，基本可以�
 };
 ```
 具体参数可查看st,stm32-xspi-nor.yaml（里面包含st,stm32h7rs-pwr.yaml）
- ![alt text](ff9319c4219c9326cadcff622f1f52da.png)
+ ![alt text](docs/images/ff9319c4219c9326cadcff622f1f52da.png)
 2. xpsi1节点
    - 主要根据 st,stm32-ospi-nor.yaml里面进行参数修改
 	   - 该板QSPI，spi-bus-width应该为QSPI：spi-bus-width =  <XSPI_QUAD_MODE>，
-		  ![alt text](cdfb770aa8ca0885f4c93d9307bb148e.png)
+		  ![alt text](docs/images/cdfb770aa8ca0885f4c93d9307bb148e.png)
    - data-rate 改为单边沿：data-rate = <XSPI_STR_TRANSFER>;
-     ![alt text](143195dd928c125eed20a531c6468195.png)
+     ![alt text](docs/images/143195dd928c125eed20a531c6468195.png)
    - 增加：jedec-id = [52 21 18];
    - 对于write_oc，根据st,stm32-ospi-nor.yaml可选两种，本板卡上flash仅支持1_1_4
-     ![alt text](ebd51dfa9ef8517d0739018034dc83bf.png)
+     ![alt text](docs/images/ebd51dfa9ef8517d0739018034dc83bf.png)
 ```
 &xspi1 {
 	pinctrl-0 = <&xspim_p1_clk_po4 &xspim_p1_ncs1_po0
@@ -216,7 +216,8 @@ CONFIG_SPI_NOR_FLASH_LAYOUT_PAGE_SIZE=4096
 };
 ```
 - 内存使用统计报告可查看./build/mcuboot/zephyr/zephyr.stat，加载地址和运行地址如下：
-  ![alt text](c30a10c65244f0fe04f88c23624a57c1.png)
+
+  ![alt text](docs/images/c30a10c65244f0fe04f88c23624a57c1.png)
 ### 3.4 app.overlay
 - 从mcuboot的内存统计报告可知，MCUBOOT会在RAM 0x24000000开始处运行，如果过不将app的运行地址往后移的话，在将app程序搬移时，会直接搬移到0x24000000处，直接将MCUBOOT覆盖，导致MCUBOOT程序卡死。
   故app.overlay将地址往后推移0x10000。
@@ -234,4 +235,5 @@ CONFIG_SPI_NOR_FLASH_LAYOUT_PAGE_SIZE=4096
 };
 ```
 - 设置后，app的内存统计图可在./build/hello_world/zephyr/zephyr.stat中查看，如下：
-  ![alt text](549ae1d9b902b2d5ee8c58d2c105aace.png)
+
+  ![alt text](docs/images/549ae1d9b902b2d5ee8c58d2c105aace.png)

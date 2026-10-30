@@ -137,14 +137,14 @@
 			compatible = "st,stm32h7rs-rcc"; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:238 */
 			#clock-cells = < 0x2 >;          /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:239 */
 			reg = < 0x58024400 0x400 >;      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:240 */
-			clocks = < &pll >;               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:116 */
-			clock-frequency = < 0xee6b280 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:117 */
-			dcpre = < 0x1 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:118 */
-			hpre = < 0x1 >;                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:119 */
-			ppre1 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:120 */
-			ppre2 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:121 */
-			ppre4 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:122 */
-			ppre5 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:123 */
+			clocks = < &pll >;               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:101 */
+			clock-frequency = < 0xee6b280 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:102 */
+			dcpre = < 0x1 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:103 */
+			hpre = < 0x1 >;                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:104 */
+			ppre1 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:105 */
+			ppre2 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:106 */
+			ppre4 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:107 */
+			ppre5 = < 0x2 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:108 */
 			phandle = < 0x3 >;               /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:263 */
 
 			/* node '/soc/rcc@58024400/reset-controller' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:242 */
@@ -159,7 +159,7 @@
 		pwr: power@58024800 {
 			compatible = "st,stm32h7rs-pwr"; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:253 */
 			reg = < 0x58024800 0x400 >;      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:254 */
-			power-supply = "smps-direct";    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:80 */
+			power-supply = "smps-direct";    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:65 */
 		};
 
 		/* node '/soc/interrupt-controller@58000000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:257 */
@@ -344,178 +344,178 @@
 			eth_mdio_pa4: eth_mdio_pa4 {
 				pinmux = < 0x8b >;             /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1075 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1076 */
-				phandle = < 0x20 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
+				phandle = < 0x20 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:141 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_mdc_pc1' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1084 */
 			eth_mdc_pc1: eth_mdc_pc1 {
 				pinmux = < 0x42b >;            /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1085 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1086 */
-				phandle = < 0x21 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
+				phandle = < 0x21 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:141 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_rmii_crs_dv_pa7' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1221 */
 			eth_rmii_crs_dv_pa7: eth_rmii_crs_dv_pa7 {
 				pinmux = < 0xeb >;             /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1222 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1223 */
-				phandle = < 0x1b >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				phandle = < 0x1b >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_rmii_rxd0_pc4' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1251 */
 			eth_rmii_rxd0_pc4: eth_rmii_rxd0_pc4 {
 				pinmux = < 0x48b >;            /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1252 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1253 */
-				phandle = < 0x1d >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				phandle = < 0x1d >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_rmii_rxd1_pc5' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1256 */
 			eth_rmii_rxd1_pc5: eth_rmii_rxd1_pc5 {
 				pinmux = < 0x4ab >;            /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1257 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1258 */
-				phandle = < 0x1e >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				phandle = < 0x1e >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_rmii_ref_clk_pd7' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1261 */
 			eth_rmii_ref_clk_pd7: eth_rmii_ref_clk_pd7 {
 				pinmux = < 0x6e4 >;            /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1262 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1263 */
-				phandle = < 0x1a >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				phandle = < 0x1a >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_rmii_tx_en_pg11' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1266 */
 			eth_rmii_tx_en_pg11: eth_rmii_tx_en_pg11 {
 				pinmux = < 0xd6b >;            /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1267 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1268 */
-				phandle = < 0x1c >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				phandle = < 0x1c >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_rmii_txd0_pg13' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1276 */
 			eth_rmii_txd0_pg13: eth_rmii_txd0_pg13 {
 				pinmux = < 0xdab >;            /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1277 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1278 */
-				phandle = < 0x18 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				phandle = < 0x18 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
 			};
 
 			/* node '/soc/pin-controller@58020000/eth_rmii_txd1_pg14' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1281 */
 			eth_rmii_txd1_pg14: eth_rmii_txd1_pg14 {
 				pinmux = < 0xdcb >;            /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1282 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:1283 */
-				phandle = < 0x19 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				phandle = < 0x19 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
 			};
 
 			/* node '/soc/pin-controller@58020000/usart1_rx_pb15' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3835 */
 			usart1_rx_pb15: usart1_rx_pb15 {
 				pinmux = < 0x3e4 >; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3836 */
-				phandle = < 0x6 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:128 */
+				phandle = < 0x6 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:113 */
 			};
 
 			/* node '/soc/pin-controller@58020000/usart2_rx_pd6' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3847 */
 			usart2_rx_pd6: usart2_rx_pd6 {
 				pinmux = < 0x6c7 >; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3848 */
-				phandle = < 0x8 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:135 */
+				phandle = < 0x8 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:120 */
 			};
 
 			/* node '/soc/pin-controller@58020000/usart1_tx_pb14' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3936 */
 			usart1_tx_pb14: usart1_tx_pb14 {
 				pinmux = < 0x3c4 >; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3937 */
 				bias-pull-up;       /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3938 */
-				phandle = < 0x5 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:128 */
+				phandle = < 0x5 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:113 */
 			};
 
 			/* node '/soc/pin-controller@58020000/usart2_tx_pd5' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3951 */
 			usart2_tx_pd5: usart2_tx_pd5 {
 				pinmux = < 0x6a7 >; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3952 */
 				bias-pull-up;       /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:3953 */
-				phandle = < 0x7 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:135 */
+				phandle = < 0x7 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:120 */
 			};
 
 			/* node '/soc/pin-controller@58020000/usb_otg_hs_dm_pm5' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4076 */
 			usb_otg_hs_dm_pm5: usb_otg_hs_dm_pm5 {
 				pinmux = < 0x18aa >; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4077 */
-				phandle = < 0x24 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:211 */
+				phandle = < 0x24 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:196 */
 			};
 
 			/* node '/soc/pin-controller@58020000/usb_otg_hs_dp_pm6' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4080 */
 			usb_otg_hs_dp_pm6: usb_otg_hs_dp_pm6 {
 				pinmux = < 0x18ca >; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4081 */
-				phandle = < 0x25 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:211 */
+				phandle = < 0x25 >;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:196 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_ncs1_po0' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4158 */
 			xspim_p1_ncs1_po0: xspim_p1_ncs1_po0 {
 				pinmux = < 0x1c09 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4159 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4160 */
-				phandle = < 0xd >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0xd >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_dqs0_po2' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4168 */
 			xspim_p1_dqs0_po2: xspim_p1_dqs0_po2 {
 				pinmux = < 0x1c49 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4169 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4170 */
-				phandle = < 0x16 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0x16 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_clk_po4' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4178 */
 			xspim_p1_clk_po4: xspim_p1_clk_po4 {
 				pinmux = < 0x1c89 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4179 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4180 */
-				phandle = < 0xc >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0xc >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io0_pp0' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4188 */
 			xspim_p1_io0_pp0: xspim_p1_io0_pp0 {
 				pinmux = < 0x1e09 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4189 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4190 */
-				phandle = < 0xe >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0xe >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io1_pp1' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4193 */
 			xspim_p1_io1_pp1: xspim_p1_io1_pp1 {
 				pinmux = < 0x1e29 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4194 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4195 */
-				phandle = < 0xf >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0xf >;             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io2_pp2' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4198 */
 			xspim_p1_io2_pp2: xspim_p1_io2_pp2 {
 				pinmux = < 0x1e49 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4199 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4200 */
-				phandle = < 0x10 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0x10 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io3_pp3' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4203 */
 			xspim_p1_io3_pp3: xspim_p1_io3_pp3 {
 				pinmux = < 0x1e69 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4204 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4205 */
-				phandle = < 0x11 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0x11 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io4_pp4' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4208 */
 			xspim_p1_io4_pp4: xspim_p1_io4_pp4 {
 				pinmux = < 0x1e89 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4209 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4210 */
-				phandle = < 0x12 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0x12 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io5_pp5' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4213 */
 			xspim_p1_io5_pp5: xspim_p1_io5_pp5 {
 				pinmux = < 0x1ea9 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4214 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4215 */
-				phandle = < 0x13 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0x13 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io6_pp6' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4218 */
 			xspim_p1_io6_pp6: xspim_p1_io6_pp6 {
 				pinmux = < 0x1ec9 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4219 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4220 */
-				phandle = < 0x14 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0x14 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 
 			/* node '/soc/pin-controller@58020000/xspim_p1_io7_pp7' defined in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4223 */
 			xspim_p1_io7_pp7: xspim_p1_io7_pp7 {
 				pinmux = < 0x1ee9 >;           /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4224 */
 				slew-rate = "very-high-speed"; /* in modules/hal/stm32/dts/st/h7/stm32h7r3l8hxh-pinctrl.dtsi:4225 */
-				phandle = < 0x15 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				phandle = < 0x15 >;            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
 			};
 		};
 
@@ -527,10 +527,10 @@
 			clocks = < &rcc 0x150 0x10 >;                    /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:387 */
 			resets = < &rctl 0x1304 >;                       /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:388 */
 			interrupts = < 0x52 0x0 >;                       /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:389 */
-			pinctrl-0 = < &usart1_tx_pb14 &usart1_rx_pb15 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:128 */
-			pinctrl-names = "default";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:129 */
-			current-speed = < 0x1c200 >;                     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:130 */
-			status = "okay";                                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:131 */
+			pinctrl-0 = < &usart1_tx_pb14 &usart1_rx_pb15 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:113 */
+			pinctrl-names = "default";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:114 */
+			current-speed = < 0x1c200 >;                     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:115 */
+			status = "okay";                                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:116 */
 		};
 
 		/* node '/soc/serial@40004400' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:393 */
@@ -541,10 +541,10 @@
 			clocks = < &rcc 0x148 0x20000 >;               /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:396 */
 			resets = < &rctl 0x1211 >;                     /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:397 */
 			interrupts = < 0x53 0x0 >;                     /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:398 */
-			pinctrl-0 = < &usart2_tx_pd5 &usart2_rx_pd6 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:135 */
-			pinctrl-names = "default";                     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:136 */
-			current-speed = < 0x1c200 >;                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:137 */
-			status = "okay";                               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:138 */
+			pinctrl-0 = < &usart2_tx_pd5 &usart2_rx_pd6 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:120 */
+			pinctrl-names = "default";                     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:121 */
+			current-speed = < 0x1c200 >;                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:122 */
+			status = "okay";                               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:123 */
 		};
 
 		/* node '/soc/serial@40004800' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:402 */
@@ -876,7 +876,7 @@
 			clocks = < &rcc 0x134 0x2000 >; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:682 */
 			io-port-1 = < &xspi1 >;         /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:683 */
 			io-port-2 = < &xspi2 >;         /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:684 */
-			status = "okay";                /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:167 */
+			status = "okay";                /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:152 */
 		};
 
 		/* node '/soc/spi@52005000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:688 */
@@ -891,35 +891,35 @@
 			#size-cells = < 0x0 >;                                                                                   /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:695 */
 			pinctrl-0 = < &xspim_p1_clk_po4 &xspim_p1_ncs1_po0 &xspim_p1_io0_pp0 &xspim_p1_io1_pp1 &xspim_p1_io2_pp2
 			              &xspim_p1_io3_pp3 &xspim_p1_io4_pp4 &xspim_p1_io5_pp5 &xspim_p1_io6_pp6 &xspim_p1_io7_pp7
-			              &xspim_p1_dqs0_po2 >;                                                                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
-			pinctrl-names = "default";                                                                               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:177 */
-			status = "okay";                                                                                         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:179 */
+			              &xspim_p1_dqs0_po2 >;                                                                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
+			pinctrl-names = "default";                                                                               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:162 */
+			status = "okay";                                                                                         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:164 */
 			phandle = < 0xa >;                                                                                       /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:683 */
 
-			/* node '/soc/spi@52005000/xspi-nor-flash@0' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:181 */
+			/* node '/soc/spi@52005000/xspi-nor-flash@0' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:166 */
 			ext_flash_ctrl: w25q128: xspi-nor-flash@0 {
-				compatible = "st,stm32-xspi-nor";      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:182 */
-				reg = < 0x0 >;                         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:183 */
-				size = < 0x8000000 >;                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:184 */
-				ospi-max-frequency = < 0x1312d00 >;    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:185 */
-				spi-bus-width = < 0x4 >;               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:186 */
-				data-rate = < 0x1 >;                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:187 */
-				jedec-id = [ 52 21 18 ];               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:189 */
-				writeoc = "PP_1_1_4";                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:190 */
-				status = "okay";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:191 */
-				#address-cells = < 0x1 >;              /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:193 */
-				#size-cells = < 0x1 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:194 */
-				ranges = < 0x0 0x90000000 0x1000000 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:195 */
+				compatible = "st,stm32-xspi-nor";      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:167 */
+				reg = < 0x0 >;                         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:168 */
+				size = < 0x8000000 >;                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:169 */
+				ospi-max-frequency = < 0x1312d00 >;    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:170 */
+				spi-bus-width = < 0x4 >;               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:171 */
+				data-rate = < 0x1 >;                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:172 */
+				jedec-id = [ 52 21 18 ];               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:174 */
+				writeoc = "PP_1_1_4";                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:175 */
+				status = "okay";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:176 */
+				#address-cells = < 0x1 >;              /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:178 */
+				#size-cells = < 0x1 >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:179 */
+				ranges = < 0x0 0x90000000 0x1000000 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:180 */
 
-				/* node '/soc/spi@52005000/xspi-nor-flash@0/nor-flash@0' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:197 */
+				/* node '/soc/spi@52005000/xspi-nor-flash@0/nor-flash@0' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:182 */
 				ext_flash: nor-flash@0 {
-					compatible = "soc-nv-flash";   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:198 */
-					reg = < 0x0 0x1000000 >;       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:200 */
-					write-block-size = < 0x1 >;    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:201 */
-					erase-block-size = < 0x1000 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:202 */
-					#address-cells = < 0x1 >;      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:203 */
-					#size-cells = < 0x1 >;         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:204 */
-					ranges;                        /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:205 */
+					compatible = "soc-nv-flash";   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:183 */
+					reg = < 0x0 0x1000000 >;       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:185 */
+					write-block-size = < 0x1 >;    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:186 */
+					erase-block-size = < 0x1000 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:187 */
+					#address-cells = < 0x1 >;      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:188 */
+					#size-cells = < 0x1 >;         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:189 */
+					ranges;                        /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:190 */
 					status = "okay";               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app.dts:40 */
 
 					/* node '/soc/spi@52005000/xspi-nor-flash@0/nor-flash@0/partitions' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app.dts:42 */
@@ -1458,26 +1458,26 @@
 			snps,perfect-filter-entries = < 0x4 >;                                                           /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1133 */
 			memory-regions = < &sram2 >;                                                                     /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1134 */
 			pinctrl-0 = < &eth_rmii_txd0_pg13 &eth_rmii_txd1_pg14 &eth_rmii_ref_clk_pd7 &eth_rmii_crs_dv_pa7
-			              &eth_rmii_tx_en_pg11 &eth_rmii_rxd0_pc4 &eth_rmii_rxd1_pc5 >;                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
-			pinctrl-names = "default";                                                                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:149 */
-			phy-connection-type = "rmii";                                                                    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:150 */
-			phy-handle = < &eth_phy >;                                                                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:151 */
-			status = "okay";                                                                                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:152 */
+			              &eth_rmii_tx_en_pg11 &eth_rmii_rxd0_pc4 &eth_rmii_rxd1_pc5 >;                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:127 */
+			pinctrl-names = "default";                                                                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:134 */
+			phy-connection-type = "rmii";                                                                    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:135 */
+			phy-handle = < &eth_phy >;                                                                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:136 */
+			status = "okay";                                                                                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:137 */
 
 			/* node '/soc/ethernet@40028000/mdio' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1137 */
 			mdio: mdio {
 				compatible = "snps,dwmac-mdio";             /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1138 */
 				#address-cells = < 0x1 >;                   /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1139 */
 				#size-cells = < 0x0 >;                      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1140 */
-				pinctrl-0 = < &eth_mdio_pa4 &eth_mdc_pc1 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:156 */
-				pinctrl-names = "default";                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:157 */
-				status = "okay";                            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:158 */
+				pinctrl-0 = < &eth_mdio_pa4 &eth_mdc_pc1 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:141 */
+				pinctrl-names = "default";                  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:142 */
+				status = "okay";                            /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:143 */
 
-				/* node '/soc/ethernet@40028000/mdio/ethernet-phy@0' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:160 */
+				/* node '/soc/ethernet@40028000/mdio/ethernet-phy@0' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:145 */
 				eth_phy: ethernet-phy@0 {
-					compatible = "ethernet-phy"; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:161 */
-					reg = < 0x0 >;               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:162 */
-					phandle = < 0x1f >;          /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:151 */
+					compatible = "ethernet-phy"; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:146 */
+					reg = < 0x0 >;               /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:147 */
+					phandle = < 0x1f >;          /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:136 */
 				};
 			};
 
@@ -1513,9 +1513,9 @@
 			maximum-speed = "high-speed";                          /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1170 */
 			phys = < &usbphyc >;                                   /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1171 */
 			clocks = < &rcc 0x138 0x2000000 >;                     /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1172 */
-			pinctrl-0 = < &usb_otg_hs_dm_pm5 &usb_otg_hs_dp_pm6 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:211 */
-			pinctrl-names = "default";                             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:212 */
-			status = "okay";                                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:213 */
+			pinctrl-0 = < &usb_otg_hs_dm_pm5 &usb_otg_hs_dp_pm6 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:196 */
+			pinctrl-names = "default";                             /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:197 */
+			status = "okay";                                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:198 */
 		};
 
 		/* node '/soc/dma@40021000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1176 */
@@ -1787,9 +1787,9 @@
 		clk_hse: clk-hse {
 			#clock-cells = < 0x0 >;            /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:101 */
 			compatible = "st,stm32-hse-clock"; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:102 */
-			clock-frequency = < 0x16e3600 >;   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:87 */
-			status = "okay";                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:88 */
-			phandle = < 0x26 >;                /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:99 */
+			clock-frequency = < 0x16e3600 >;   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:72 */
+			status = "okay";                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:73 */
+			phandle = < 0x26 >;                /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:84 */
 		};
 
 		/* node '/clocks/clk-hsi' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:107 */
@@ -1806,7 +1806,7 @@
 			#clock-cells = < 0x0 >;          /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:116 */
 			compatible = "fixed-clock";      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:117 */
 			clock-frequency = < 0x2dc6c00 >; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:118 */
-			status = "okay";                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:83 */
+			status = "okay";                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:68 */
 		};
 
 		/* node '/clocks/clk-csi' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:122 */
@@ -1839,16 +1839,16 @@
 			#clock-cells = < 0x0 >;                /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:145 */
 			compatible = "st,stm32h7rs-pll-clock"; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:146 */
 			reg = < 0x0 >;                         /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:147 */
-			div-m = < 0xc >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:92 */
-			mul-n = < 0xfa >;                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:93 */
-			div-p = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:94 */
-			div-q = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:95 */
-			div-r = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:96 */
-			div-s = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:97 */
-			div-t = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:98 */
-			clocks = < &clk_hse >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:99 */
-			status = "okay";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:100 */
-			phandle = < 0x2 >;                     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:116 */
+			div-m = < 0xc >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:77 */
+			mul-n = < 0xfa >;                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:78 */
+			div-p = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:79 */
+			div-q = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:80 */
+			div-r = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:81 */
+			div-s = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:82 */
+			div-t = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:83 */
+			clocks = < &clk_hse >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:84 */
+			status = "okay";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:85 */
+			phandle = < 0x2 >;                     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:101 */
 		};
 
 		/* node '/clocks/pll@1' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:151 */
@@ -1856,15 +1856,15 @@
 			#clock-cells = < 0x0 >;                /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:152 */
 			compatible = "st,stm32h7rs-pll-clock"; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:153 */
 			reg = < 0x1 >;                         /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:154 */
-			div-m = < 0xc >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:104 */
-			mul-n = < 0xc8 >;                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:105 */
-			div-p = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:106 */
-			div-q = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:107 */
-			div-r = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:108 */
-			div-s = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:109 */
-			div-t = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:110 */
-			clocks = < &clk_hse >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:111 */
-			status = "okay";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:112 */
+			div-m = < 0xc >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:89 */
+			mul-n = < 0xc8 >;                      /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:90 */
+			div-p = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:91 */
+			div-q = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:92 */
+			div-r = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:93 */
+			div-s = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:94 */
+			div-t = < 0x2 >;                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:95 */
+			clocks = < &clk_hse >;                 /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:96 */
+			status = "okay";                       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:97 */
 		};
 
 		/* node '/clocks/pll@2' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:158 */
@@ -1939,7 +1939,7 @@
 		clock-names = "gate",
 		              "mux",
 		              "fsel";              /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1347 */
-		status = "okay";                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:222 */
+		status = "okay";                   /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:207 */
 		phandle = < 0x23 >;                /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1171 */
 	};
 

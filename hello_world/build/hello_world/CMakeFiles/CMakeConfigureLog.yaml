@@ -1677,7 +1677,7 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -1750,7 +1750,7 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:213 (message)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:213 (message)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -1762,7 +1762,7 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -1854,11 +1854,11 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -1878,9 +1878,9 @@ events:
     names:
       - "CMakeCCompilerId.c.in"
     candidate_directories:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/"
-    found: "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    found: "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
@@ -1904,9 +1904,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -1925,13 +1925,13 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/CMakeFiles/4.4.4/CompilerIdC/a.out
+        /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/CMakeFiles/4.4.5/CompilerIdC/a.out
       
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2022,8 +2022,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2083,8 +2083,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2175,8 +2175,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2284,8 +2284,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2393,11 +2393,11 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2417,9 +2417,9 @@ events:
     names:
       - "CMakeCXXCompilerId.cpp.in"
     candidate_directories:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/"
-    found: "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    found: "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
@@ -2443,9 +2443,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2464,13 +2464,13 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/CMakeFiles/4.4.4/CompilerIdCXX/a.out
+        /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/CMakeFiles/4.4.5/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2578,8 +2578,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:172 (project)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2687,8 +2687,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:61 (_cmake_find_compiler)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:61 (_cmake_find_compiler)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:178 (enable_language)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2736,8 +2736,8 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:1328 (message)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:174 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:1328 (message)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:174 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:178 (enable_language)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2753,8 +2753,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:271 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:271 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:178 (enable_language)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
@@ -2850,8 +2850,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/snap/cmake/1572/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:271 (include)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/snap/cmake/1579/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:271 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/kernel.cmake:178 (enable_language)"
       - "/home/ubuntu/work/zephyr/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
       - "/home/ubuntu/work/zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"

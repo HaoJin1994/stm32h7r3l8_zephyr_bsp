@@ -5854,7 +5854,8 @@
   zephyr,memory-attr = <(((1UL << (2))) << (20))>;
  };
 };
-# 79 "/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi"
+
+
 &pwr {
  power-supply = "smps-direct";
 };
