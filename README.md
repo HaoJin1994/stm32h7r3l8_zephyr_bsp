@@ -1,0 +1,2 @@
+# stm32h7r3l8_zephyr_bsp
+基于正点原子的STM32H7R3L8进行zephyr bsp移植
