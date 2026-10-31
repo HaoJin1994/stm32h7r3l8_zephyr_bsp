@@ -37,4 +37,4 @@ empty_file.o: /home/ubuntu/work/zephyr/zephyr/misc/empty_file.c \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl.h \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl-common.h \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- app.overlay modules/net/net.overlay
+ app.overlay modules/ota/ota.overlay modules/net/net.overlay

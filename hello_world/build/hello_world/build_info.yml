@@ -14,6 +14,7 @@ cmake:
     files:
      - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app.dts'
      - 'app.overlay'
+     - 'modules/ota/ota.overlay'
      - 'modules/net/net.overlay'
     include-dirs:
      - '/home/ubuntu/work/zephyr/modules/hal/ambiq/dts'
@@ -44,15 +45,18 @@ cmake:
      - '/home/ubuntu/work/zephyr/zephyr/dts'
     user-files:
      - 'app.overlay'
+     - 'modules/ota/ota.overlay'
      - 'modules/net/net.overlay'
   kconfig:
     files:
      - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app_defconfig'
      - '/home/ubuntu/work/aknw_h7rsx/hello_world/prj.conf'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf'
      - '/home/ubuntu/work/aknw_h7rsx/hello_world/modules/net/net.conf'
      - '/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/.config.sysbuild'
     user-files:
      - 'prj.conf'
+     - 'modules/ota/ota.conf'
      - 'modules/net/net.conf'
   toolchain:
     name: 'zephyr'

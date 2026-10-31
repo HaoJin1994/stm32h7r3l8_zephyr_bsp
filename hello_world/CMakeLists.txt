@@ -7,6 +7,8 @@ project(hello_world)
 
 target_sources(app PRIVATE 
     src/main.c
+    #src/flash_rw.c
+    #src/sha256.c
 )
 
 

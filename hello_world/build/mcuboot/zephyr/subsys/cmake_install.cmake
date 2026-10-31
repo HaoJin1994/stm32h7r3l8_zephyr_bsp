@@ -60,6 +60,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/testsuite/cmake_install.cmake")
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/tracing/cmake_install.cmake")
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/usb/cmake_install.cmake")
+  include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/crc/cmake_install.cmake")
+  include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/retention/cmake_install.cmake")
 
 endif()
 

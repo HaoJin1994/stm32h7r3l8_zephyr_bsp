@@ -50,6 +50,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/flash/cmake_install.cmake")
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/pinctrl/cmake_install.cmake")
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/reset/cmake_install.cmake")
+  include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/retained_mem/cmake_install.cmake")
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/serial/cmake_install.cmake")
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/timer/cmake_install.cmake")
 

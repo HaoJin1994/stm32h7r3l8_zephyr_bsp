@@ -323,7 +323,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 // listed, e.g. CONF_FILE="prj1.conf;prj2.conf" The CACHED_CONF_FILE
 // is internal Zephyr variable used between CMake runs. To change
 // CONF_FILE, use the CONF_FILE variable.
-CONF_FILE:STRING=prj.conf;modules/net/net.conf
+CONF_FILE:STRING=prj.conf;modules/ota/ota.conf;modules/net/net.conf
 
 //Path to a program.
 DTC:FILEPATH=/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/dtc
@@ -333,7 +333,7 @@ DTC:FILEPATH=/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=app.overlay;modules/net/net.overlay
+DTC_OVERLAY_FILE:STRING=app.overlay;modules/ota/ota.overlay;modules/net/net.overlay
 
 //No help, variable specified on the command line.
 EXTRA_KCONFIG_TARGETS:UNINITIALIZED=
@@ -567,7 +567,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=144
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=159
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

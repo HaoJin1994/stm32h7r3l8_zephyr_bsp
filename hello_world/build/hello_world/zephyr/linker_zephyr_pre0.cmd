@@ -4,7 +4,7 @@ MEMORY
     {
     FLASH (rx) : ORIGIN = (604045312), LENGTH = (0 * 1024 - 0x0 - 0xc6)
     RAM (wx) : ORIGIN = (604045312), LENGTH = (393216)
-    SRAM0 ( rw ) : ORIGIN = (603979776), LENGTH = (466944) SRAM1 ( rw ) : ORIGIN = (805306368), LENGTH = (16384) SRAM2 ( rw ) : ORIGIN = (805322752), LENGTH = (16384) DTCM ( rw ) : ORIGIN = (536870912), LENGTH = (65536) ITCM ( rw ) : ORIGIN = (0), LENGTH = (65536) EXTMEM ( rw ) : ORIGIN = (2415919104), LENGTH = (16777216) SRAM_APP ( rw ) : ORIGIN = (604045312), LENGTH = (393216)
+    SRAM0 ( rw ) : ORIGIN = (603979776), LENGTH = (466944) RetainedMem ( rw ) : ORIGIN = (805306368), LENGTH = (1024) SRAM2 ( rw ) : ORIGIN = (805322752), LENGTH = (16384) DTCM ( rw ) : ORIGIN = (536870912), LENGTH = (65536) ITCM ( rw ) : ORIGIN = (0), LENGTH = (65536) EXTMEM ( rw ) : ORIGIN = (2415919104), LENGTH = (16777216) SRAM_APP ( rw ) : ORIGIN = (604045312), LENGTH = (393216)
     IDT_LIST (wx) : ORIGIN = 0xFFFF7FFF, LENGTH = 32K
     }
 ENTRY("__start")
@@ -124,6 +124,8 @@ device_api_area : SUBALIGN(4)
  _gpio_driver_api_ext_end = .;
  _reset_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._reset_driver_api.static.*))); _reset_driver_api_list_end = .;;
  _reset_driver_api_ext_end = .;
+ _retained_mem_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._retained_mem_driver_api.static.*))); _retained_mem_driver_api_list_end = .;;
+ _retained_mem_driver_api_ext_end = .;
  _shared_irq_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._shared_irq_driver_api.static.*))); _shared_irq_driver_api_list_end = .;;
  _shared_irq_driver_api_ext_end = .;
  _audio_codec_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._audio_codec_driver_api.static.*))); _audio_codec_driver_api_list_end = .;;
@@ -250,8 +252,6 @@ device_api_area : SUBALIGN(4)
  _regulator_parent_driver_api_ext_end = .;
  _regulator_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._regulator_driver_api.static.*))); _regulator_driver_api_list_end = .;;
  _regulator_driver_api_ext_end = .;
- _retained_mem_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._retained_mem_driver_api.static.*))); _retained_mem_driver_api_list_end = .;;
- _retained_mem_driver_api_ext_end = .;
  _rtc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._rtc_driver_api.static.*))); _rtc_driver_api_list_end = .;;
  _rtc_driver_api_ext_end = .;
  _sdhc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._sdhc_driver_api.static.*))); _sdhc_driver_api_list_end = .;;
@@ -360,6 +360,7 @@ ztest :
   KEEP(*(".dbg_thread_info"));
  } > RAM
  intc_table_area : { _intc_table_list_start = .; KEEP(*(SORT_BY_NAME(._intc_table.static.*))); _intc_table_list_end = .;; } > RAM
+ mcumgr_handler_area : { _mcumgr_handler_list_start = .; KEEP(*(SORT_BY_NAME(._mcumgr_handler.static.*))); _mcumgr_handler_list_end = .;; } > RAM
  symbol_to_keep :
  {
   __symbol_to_keep_start = .;
@@ -496,6 +497,7 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
  sys_mem_blocks_ptr_area : { _sys_mem_blocks_ptr_list_start = .; *(SORT_BY_NAME(._sys_mem_blocks_ptr.static.*)); _sys_mem_blocks_ptr_list_end = .;; } > RAM
  net_buf_pool_area : { _net_buf_pool_list_start = .; KEEP(*(SORT_BY_NAME(._net_buf_pool.static.*))); _net_buf_pool_list_end = .;; } > RAM
  net_if_area : { _net_if_list_start = .; KEEP(*(SORT_BY_NAME(._net_if.static.*))); _net_if_list_end = .;; } > RAM net_if_dev_area : { _net_if_dev_list_start = .; KEEP(*(SORT_BY_NAME(._net_if_dev.static.*))); _net_if_dev_list_end = .;; } > RAM net_l2_area : { _net_l2_list_start = .; KEEP(*(SORT_BY_NAME(._net_l2.static.*))); _net_l2_list_end = .;; } > RAM eth_bridge_area : { _eth_bridge_list_start = .; KEEP(*(SORT_BY_NAME(._eth_bridge.static.*))); _eth_bridge_list_end = .;; } > RAM
+conn_mgr_conn_binding_area : { _conn_mgr_conn_binding_list_start = .; KEEP(*(SORT_BY_NAME(._conn_mgr_conn_binding.static.*))); _conn_mgr_conn_binding_list_end = .;; } > RAM
     __data_region_end = .;
 
  .dtcm_bss (NOLOAD) : ALIGN(4)
@@ -577,7 +579,7 @@ eth_stm32 (NOLOAD) :
  KEEP(*(.ARM.attributes))
  KEEP(*(.gnu.attributes))
  }
-    SRAM0 (NOLOAD) : { __SRAM0_start = .; KEEP(*(SRAM0)) KEEP(*(SRAM0.*)) __SRAM0_end = .; } > SRAM0 __SRAM0_size = __SRAM0_end - __SRAM0_start; __SRAM0_load_start = LOADADDR(SRAM0); SRAM1 (NOLOAD) : { __SRAM1_start = .; KEEP(*(SRAM1)) KEEP(*(SRAM1.*)) __SRAM1_end = .; } > SRAM1 __SRAM1_size = __SRAM1_end - __SRAM1_start; __SRAM1_load_start = LOADADDR(SRAM1); SRAM2 (NOLOAD) : { __SRAM2_start = .; KEEP(*(SRAM2)) KEEP(*(SRAM2.*)) __SRAM2_end = .; } > SRAM2 __SRAM2_size = __SRAM2_end - __SRAM2_start; __SRAM2_load_start = LOADADDR(SRAM2); DTCM (NOLOAD) : { __DTCM_start = .; KEEP(*(DTCM)) KEEP(*(DTCM.*)) __DTCM_end = .; } > DTCM __DTCM_size = __DTCM_end - __DTCM_start; __DTCM_load_start = LOADADDR(DTCM); ITCM (NOLOAD) : { __ITCM_start = .; KEEP(*(ITCM)) KEEP(*(ITCM.*)) __ITCM_end = .; } > ITCM __ITCM_size = __ITCM_end - __ITCM_start; __ITCM_load_start = LOADADDR(ITCM); EXTMEM (NOLOAD) : { __EXTMEM_start = .; KEEP(*(EXTMEM)) KEEP(*(EXTMEM.*)) __EXTMEM_end = .; } > EXTMEM __EXTMEM_size = __EXTMEM_end - __EXTMEM_start; __EXTMEM_load_start = LOADADDR(EXTMEM); SRAM_APP (NOLOAD) : { __SRAM_APP_start = .; KEEP(*(SRAM_APP)) KEEP(*(SRAM_APP.*)) __SRAM_APP_end = .; } > SRAM_APP __SRAM_APP_size = __SRAM_APP_end - __SRAM_APP_start; __SRAM_APP_load_start = LOADADDR(SRAM_APP);
+    SRAM0 (NOLOAD) : { __SRAM0_start = .; KEEP(*(SRAM0)) KEEP(*(SRAM0.*)) __SRAM0_end = .; } > SRAM0 __SRAM0_size = __SRAM0_end - __SRAM0_start; __SRAM0_load_start = LOADADDR(SRAM0); RetainedMem (NOLOAD) : { __RetainedMem_start = .; KEEP(*(RetainedMem)) KEEP(*(RetainedMem.*)) __RetainedMem_end = .; } > RetainedMem __RetainedMem_size = __RetainedMem_end - __RetainedMem_start; __RetainedMem_load_start = LOADADDR(RetainedMem); SRAM2 (NOLOAD) : { __SRAM2_start = .; KEEP(*(SRAM2)) KEEP(*(SRAM2.*)) __SRAM2_end = .; } > SRAM2 __SRAM2_size = __SRAM2_end - __SRAM2_start; __SRAM2_load_start = LOADADDR(SRAM2); DTCM (NOLOAD) : { __DTCM_start = .; KEEP(*(DTCM)) KEEP(*(DTCM.*)) __DTCM_end = .; } > DTCM __DTCM_size = __DTCM_end - __DTCM_start; __DTCM_load_start = LOADADDR(DTCM); ITCM (NOLOAD) : { __ITCM_start = .; KEEP(*(ITCM)) KEEP(*(ITCM.*)) __ITCM_end = .; } > ITCM __ITCM_size = __ITCM_end - __ITCM_start; __ITCM_load_start = LOADADDR(ITCM); EXTMEM (NOLOAD) : { __EXTMEM_start = .; KEEP(*(EXTMEM)) KEEP(*(EXTMEM.*)) __EXTMEM_end = .; } > EXTMEM __EXTMEM_size = __EXTMEM_end - __EXTMEM_start; __EXTMEM_load_start = LOADADDR(EXTMEM); SRAM_APP (NOLOAD) : { __SRAM_APP_start = .; KEEP(*(SRAM_APP)) KEEP(*(SRAM_APP.*)) __SRAM_APP_end = .; } > SRAM_APP __SRAM_APP_size = __SRAM_APP_end - __SRAM_APP_start; __SRAM_APP_load_start = LOADADDR(SRAM_APP);
 .last_section :
 {
   KEEP(*(.last_section))

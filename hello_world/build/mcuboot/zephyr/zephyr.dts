@@ -18,6 +18,7 @@
 		zephyr,code-partition = &boot_partition; /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:6 */
 		zephyr,flash-controller = &flash;        /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:7 */
 		zephyr,flash = &flash0;                  /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:8 */
+		zephyr,bootloader-info = &retention0;    /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:9 */
 	};
 
 	/* node '/aliases' defined in zephyr/dts/common/skeleton.dtsi:15 */
@@ -1665,13 +1666,31 @@
 	};
 
 	/* node '/memory@30000000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:63 */
-	sram1: memory@30000000 {
-		reg = < 0x30000000 0x4000 >;         /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:64 */
+	sram1: sram1_ret: memory@30000000 {
+		#memory-region-cells = < 0x0 >;       /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:67 */
+		zephyr,memory-attr = < 0x100000 >;    /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:68 */
 		compatible = "zephyr,memory-region",
-		             "mmio-sram";            /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:65 */
-		zephyr,memory-region = "SRAM1";      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:66 */
-		#memory-region-cells = < 0x0 >;      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:67 */
-		zephyr,memory-attr = < 0x100000 >;   /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:68 */
+		             "mmio-sram";             /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:12 */
+		reg = < 0x30000000 0x400 >;           /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:13 */
+		zephyr,memory-region = "RetainedMem"; /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:14 */
+		status = "okay";                      /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:15 */
+
+		/* node '/memory@30000000/retainedmem' defined in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:17 */
+		retainedmem {
+			compatible = "zephyr,retained-ram"; /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:18 */
+			status = "okay";                    /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:19 */
+			#address-cells = < 0x1 >;           /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:20 */
+			#size-cells = < 0x1 >;              /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:21 */
+
+			/* node '/memory@30000000/retainedmem/retention@0' defined in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:23 */
+			retention0: retention@0 {
+				compatible = "zephyr,retention"; /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:24 */
+				status = "okay";                 /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:25 */
+				reg = < 0x0 0x40 >;              /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:26 */
+				prefix = [ 04 FA ];              /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:27 */
+				checksum = < 0x1 >;              /* in ../aknw_h7rsx/hello_world/sysbuild/mcuboot.overlay:28 */
+			};
+		};
 	};
 
 	/* node '/memory@30004000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:72 */

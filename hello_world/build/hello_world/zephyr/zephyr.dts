@@ -18,6 +18,7 @@
 		zephyr,flash-controller = &ext_flash_ctrl; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app.dts:17 */
 		zephyr,code-partition = &slot0_partition;  /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app.dts:18 */
 		zephyr,sram = &sram_app;                   /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/app.overlay:11 */
+		zephyr,bootloader-info = &retention0;      /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:5 */
 	};
 
 	/* node '/aliases' defined in zephyr/dts/common/skeleton.dtsi:15 */
@@ -1744,13 +1745,31 @@
 	};
 
 	/* node '/memory@30000000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:63 */
-	sram1: memory@30000000 {
-		reg = < 0x30000000 0x4000 >;         /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:64 */
+	sram1: sram1_ret: memory@30000000 {
+		#memory-region-cells = < 0x0 >;       /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:67 */
+		zephyr,memory-attr = < 0x100000 >;    /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:68 */
 		compatible = "zephyr,memory-region",
-		             "mmio-sram";            /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:65 */
-		zephyr,memory-region = "SRAM1";      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:66 */
-		#memory-region-cells = < 0x0 >;      /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:67 */
-		zephyr,memory-attr = < 0x100000 >;   /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:68 */
+		             "mmio-sram";             /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:9 */
+		reg = < 0x30000000 0x400 >;           /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:10 */
+		zephyr,memory-region = "RetainedMem"; /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:11 */
+		status = "okay";                      /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:12 */
+
+		/* node '/memory@30000000/retainedmem' defined in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:14 */
+		retainedmem {
+			compatible = "zephyr,retained-ram"; /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:15 */
+			status = "okay";                    /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:16 */
+			#address-cells = < 0x1 >;           /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:17 */
+			#size-cells = < 0x1 >;              /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:18 */
+
+			/* node '/memory@30000000/retainedmem/retention@0' defined in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:20 */
+			retention0: retention@0 {
+				compatible = "zephyr,retention"; /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:21 */
+				status = "okay";                 /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:22 */
+				reg = < 0x0 0x40 >;              /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:23 */
+				prefix = [ 04 FA ];              /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:24 */
+				checksum = < 0x1 >;              /* in ../aknw_h7rsx/hello_world/build/hello_world/zephyr/modules/ota/ota.overlay:25 */
+			};
+		};
 	};
 
 	/* node '/memory@30004000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:72 */

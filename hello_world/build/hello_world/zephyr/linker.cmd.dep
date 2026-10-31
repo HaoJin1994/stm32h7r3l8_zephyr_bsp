@@ -87,6 +87,7 @@ linker.cmd: \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/linker/kobject-data.ld \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/linker/cplusplus-ram.ld \
  /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/include/generated/snippets-data-sections.ld \
+ /home/ubuntu/work/zephyr/zephyr/include/../subsys/net/conn_mgr/conn_mgr.ld \
  /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/include/generated/snippets-dtcm-section.ld \
  /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/include/generated/snippets-sections.ld \
  /home/ubuntu/work/zephyr/zephyr/include/../soc/st/stm32/stm32h7rsx/sections.ld \

@@ -451,6 +451,28 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_ZEPHYR_RETAINED_RAM_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/Kconfig.dts",
+      19073
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ZEPHYR_RETENTION_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/Kconfig.dts",
+      19083
+    ]
+  ],
+  [
     "CONFIG_NET_IF_MAX_IPV4_COUNT",
     "y",
     "int",
@@ -1486,9 +1508,11 @@
     "CONFIG_REBOOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "imply",
+    [
+      "MCUMGR_GRP_OS && MCUMGR"
+    ]
   ],
   [
     "CONFIG_FLASH_INIT_PRIORITY",
@@ -2007,9 +2031,47 @@
     "CONFIG_ZCBOR",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      39
+    ]
+  ],
+  [
+    "CONFIG_ZCBOR_CANONICAL",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_ZCBOR_STOP_ON_ERROR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ZCBOR_VERBOSE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ZCBOR_MAX_STR_LEN",
+    "y",
+    "int",
+    "256",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/modules/zcbor/Kconfig",
+      46
+    ]
   ],
   [
     "CONFIG_LVGL",
@@ -2145,11 +2207,11 @@
     "CONFIG_MCUBOOT_IMGTOOL_SIGN_VERSION",
     "y",
     "string",
-    "0.0.0+0",
-    "default",
+    "1.0.1",
+    "assign",
     [
-      "/home/ubuntu/work/zephyr/zephyr/modules/Kconfig.mcuboot",
-      114
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      46
     ]
   ],
   [
@@ -2323,9 +2385,42 @@
     "CONFIG_MCUBOOT_BOOTUTIL_LIB",
     "y",
     "bool",
+    "y",
+    "select",
+    [
+      "MCUBOOT_IMG_MANAGER && FLASH_MAP && <choice>",
+      "RETENTION_BOOTLOADER_INFO_TYPE_MCUBOOT && !MCUBOOT && BOOTLOADER_MCUBOOT && RETENTION_BOOTLOADER_INFO && RETENTION"
+    ]
+  ],
+  [
+    "CONFIG_MCUBOOT_BOOTUTIL_LIB_OWN_LOG",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/modules/Kconfig.mcuboot",
+      403
+    ]
+  ],
+  [
+    "CONFIG_BOOT_IMAGE_ACCESS_HOOKS",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_MCUBOOT_BOOT_MAX_ALIGN",
+    "y",
+    "int",
+    "1",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/modules/Kconfig.mcuboot",
+      433
+    ]
   ],
   [
     "CONFIG_WIFI_NM_WPA_SUPPLICANT",
@@ -2592,7 +2687,8 @@
     "y",
     "select",
     [
-      "SOC_FLASH_STM32 && ARM_MPU && DT_HAS_ST_STM32_FLASH_CONTROLLER_ENABLED && FLASH"
+      "SOC_FLASH_STM32 && ARM_MPU && DT_HAS_ST_STM32_FLASH_CONTROLLER_ENABLED && FLASH",
+      "MCUMGR_GRP_IMG && ARM_MPU && FLASH && IMG_MANAGER && !MCUBOOT_BOOTLOADER_MODE_SINGLE_APP && (MCUMGR_TRANSPORT_NETBUF_SIZE >= 104 || !MCUMGR_TRANSPORT_UART) && MCUMGR"
     ]
   ],
   [
@@ -5335,9 +5431,53 @@
     "CONFIG_RETAINED_MEM",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      18
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_INIT_PRIORITY",
+    "y",
+    "int",
+    "40",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/retained_mem/Kconfig",
+      14
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_MUTEXES",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/retained_mem/Kconfig",
+      20
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_MUTEX_FORCE_DISABLE",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_RETAINED_MEM_ZEPHYR_RAM",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/retained_mem/Kconfig.zephyr",
+      6
+    ]
   ],
   [
     "CONFIG_RTC",
@@ -6702,9 +6842,12 @@
     "CONFIG_BASE64",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      40
+    ]
   ],
   [
     "CONFIG_ONOFF",
@@ -6823,9 +6966,10 @@
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "ETH_STM32_HAL && DT_HAS_ST_STM32_ETHERNET_ENABLED && ETH_DRIVER"
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      41
     ]
   ],
   [
@@ -7011,6 +7155,96 @@
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_IMG_MANAGER",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      24
+    ]
+  ],
+  [
+    "CONFIG_MCUBOOT_IMG_MANAGER",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/dfu/Kconfig",
+      22
+    ]
+  ],
+  [
+    "CONFIG_MCUBOOT_SHELL",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUBOOT_TRAILER_SWAP_TYPE",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/dfu/Kconfig",
+      48
+    ]
+  ],
+  [
+    "CONFIG_MCUBOOT_UPDATE_FOOTER_SIZE",
+    "y",
+    "hex",
+    "0x30",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/.config.sysbuild",
+      3
+    ]
+  ],
+  [
+    "CONFIG_IMG_BLOCK_BUF_SIZE",
+    "y",
+    "int",
+    "512",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/dfu/Kconfig",
+      66
+    ]
+  ],
+  [
+    "CONFIG_IMG_ERASE_PROGRESSIVELY",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_IMG_ENABLE_IMAGE_CHECK",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_UPDATEABLE_IMAGE_NUMBER",
+    "y",
+    "int",
+    "1",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/dfu/Kconfig",
+      112
+    ]
   ],
   [
     "CONFIG_DISK_ACCESS",
@@ -7393,6 +7627,639 @@
     null
   ],
   [
+    "CONFIG_MCUMGR",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      33
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_MGMT_NOTIFICATION_HOOKS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_MGMT_HANDLER_USER_DATA",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_MGMT_CUSTOM_PAYLOAD",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_CBOR_MAX_MAIN_MAP_ENTRIES",
+    "y",
+    "int",
+    "15",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/smp/Kconfig",
+      16
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_CBOR_MIN_DECODING_LEVELS",
+    "n",
+    "int",
+    "2",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/smp/Kconfig",
+      33
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_CBOR_MIN_DECODING_LEVEL_2",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "MCUMGR_GRP_IMG && FLASH && IMG_MANAGER && !MCUBOOT_BOOTLOADER_MODE_SINGLE_APP && (MCUMGR_TRANSPORT_NETBUF_SIZE >= 104 || !MCUMGR_TRANSPORT_UART) && MCUMGR",
+      "MCUMGR_GRP_OS_ECHO && MCUMGR_GRP_OS && MCUMGR"
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_CBOR_MAX_DECODING_LEVELS",
+    "y",
+    "int",
+    "2",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/smp/Kconfig",
+      66
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_CBOR_MIN_ENCODING_LEVELS",
+    "n",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/smp/Kconfig",
+      85
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_CBOR_MAX_ENCODING_LEVELS",
+    "y",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/smp/Kconfig",
+      116
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_SUPPORT_ORIGINAL_PROTOCOL",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/smp/Kconfig",
+      131
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_VERBOSE_ERR_RESPONSE",
+    "y",
+    "bool",
+    "y",
+    "select",
+    [
+      "MCUMGR_GRP_IMG_VERBOSE_ERR && MCUMGR_GRP_IMG && MCUMGR"
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_SMP_LEGACY_RC_BEHAVIOUR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SMP_CLIENT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_FS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      25
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_UPDATABLE_IMAGE_NUMBER",
+    "y",
+    "int",
+    "1",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/img_mgmt/Kconfig",
+      49
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_VERBOSE_ERR",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      28
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_ALLOW_CONFIRM_NON_ACTIVE_IMAGE_SECONDARY",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/img_mgmt/Kconfig",
+      69
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_ALLOW_CONFIRM_NON_ACTIVE_IMAGE_ANY",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_ALLOW_ERASE_PENDING",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/img_mgmt/Kconfig",
+      89
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_DIRECT_UPLOAD",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_FRUGAL_LIST",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_VERSION_CMP_USE_BUILD_NUMBER",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_MUTEX",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_TOO_LARGE_DISABLED",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/img_mgmt/Kconfig",
+      175
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_TOO_LARGE_SYSBUILD",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_TOO_LARGE_BOOTLOADER_INFO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_IMAGE_SLOT_STATE_STATES",
+    "n",
+    "int",
+    "15",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/img_mgmt/Kconfig",
+      215
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_IMG_SLOT_INFO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      34
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_RESET_MS",
+    "y",
+    "int",
+    "250",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/os_mgmt/Kconfig",
+      27
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      35
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_ONLY_SUPPORTED_STATS",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/os_mgmt/Kconfig",
+      63
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_USE_THREAD_NAME_FOR_NAME",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/os_mgmt/Kconfig",
+      72
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_USE_THREAD_IDX_FOR_NAME",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_USE_THREAD_PRIO_FOR_NAME",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_MAX_NUM_THREADS",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/os_mgmt/Kconfig",
+      92
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_THREAD_NAME_LEN",
+    "y",
+    "int",
+    "32",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/os_mgmt/Kconfig",
+      100
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_SIGNED_PRIORITY",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/os_mgmt/Kconfig",
+      113
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_TASKSTAT_STACK_INFO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_ECHO",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/grp/os_mgmt/Kconfig",
+      155
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_MCUMGR_PARAMS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_INFO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_OS_BOOTLOADER_INFO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_ZBASIC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_ENUM",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_GRP_TRANSPORT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_WORKQUEUE_STACK_SIZE",
+    "y",
+    "int",
+    "2048",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig",
+      17
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_WORKQUEUE_THREAD_PRIO",
+    "y",
+    "int",
+    "3",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig",
+      24
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_NETBUF_COUNT",
+    "y",
+    "int",
+    "2",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig",
+      35
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_NETBUF_SIZE",
+    "y",
+    "int",
+    "2048",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig",
+      51
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_NETBUF_MIN_USER_DATA_SIZE",
+    "n",
+    "int",
+    "8",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig",
+      64
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_NETBUF_USER_DATA_SIZE",
+    "y",
+    "int",
+    "8",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig",
+      73
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_DUMMY",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_RAW_DUMMY",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_SHELL",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      36
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP_IPV4",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig.udp",
+      26
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP_PORT",
+    "y",
+    "int",
+    "1337",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig.udp",
+      40
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP_STACK_SIZE",
+    "y",
+    "int",
+    "1024",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig.udp",
+      46
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP_THREAD_PRIO",
+    "y",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig.udp",
+      52
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP_MTU",
+    "y",
+    "int",
+    "1500",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig.udp",
+      58
+    ]
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP_DTLS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUMGR_TRANSPORT_UDP_AUTOMATIC_INIT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/mgmt/mcumgr/transport/Kconfig.udp",
+      88
+    ]
+  ],
+  [
     "CONFIG_OSDP",
     "y",
     "bool",
@@ -7604,6 +8471,14 @@
       "/home/ubuntu/work/zephyr/zephyr/subsys/net/l2/ethernet/Kconfig",
       113
     ]
+  ],
+  [
+    "CONFIG_NET_ARP_GRATUITOUS_TRANSMISSION",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_NET_ARP_LOG_LEVEL",
@@ -8843,7 +9718,8 @@
     "y",
     "select",
     [
-      "NET_CONFIG_SETTINGS && NETWORKING"
+      "NET_CONFIG_SETTINGS && NETWORKING",
+      "NET_CONNECTION_MANAGER && (NET_IPV6 || NET_IPV4) && NETWORKING"
     ]
   ],
   [
@@ -8853,7 +9729,8 @@
     "y",
     "select",
     [
-      "NET_CONFIG_SETTINGS && NETWORKING"
+      "NET_CONFIG_SETTINGS && NETWORKING",
+      "NET_CONNECTION_MANAGER && (NET_IPV6 || NET_IPV4) && NETWORKING"
     ]
   ],
   [
@@ -8907,6 +9784,27 @@
   ],
   [
     "CONFIG_NET_MGMT_EVENT_INFO",
+    "y",
+    "bool",
+    "y",
+    "select",
+    [
+      "NET_CONNECTION_MANAGER && (NET_IPV6 || NET_IPV4) && NETWORKING"
+    ]
+  ],
+  [
+    "CONFIG_NET_MGMT_EVENT_INFO_DEFAULT_DATA_SIZE",
+    "y",
+    "int",
+    "32",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/net/ip/Kconfig.mgmt",
+      102
+    ]
+  ],
+  [
+    "CONFIG_NET_MGMT_EVENT_MONITOR",
     "y",
     "bool",
     null,
@@ -10148,9 +11046,55 @@
     "CONFIG_NET_CONNECTION_MANAGER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "select",
+    [
+      "MCUMGR_TRANSPORT_UDP && NET_UDP && NET_SOCKETS && MCUMGR"
+    ]
+  ],
+  [
+    "CONFIG_NET_CONNECTION_MANAGER_LOG_LEVEL",
+    "n",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/net/Kconfig.template.log_config.net",
+      50
+    ]
+  ],
+  [
+    "CONFIG_NET_CONNECTION_MANAGER_MONITOR_STACK_SIZE",
+    "y",
+    "int",
+    "512",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/net/conn_mgr/Kconfig",
+      26
+    ]
+  ],
+  [
+    "CONFIG_NET_CONNECTION_MANAGER_MONITOR_PRIORITY",
+    "y",
+    "int",
+    "1",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/net/conn_mgr/Kconfig",
+      33
+    ]
+  ],
+  [
+    "CONFIG_NET_CONNECTION_MANAGER_AUTO_IF_DOWN",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/net/conn_mgr/Kconfig",
+      40
+    ]
   ],
   [
     "CONFIG_PM_POLICY_LATENCY_STANDALONE",
@@ -11155,6 +12099,110 @@
     ]
   ],
   [
+    "CONFIG_RETENTION",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      19
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_INIT_PRIORITY",
+    "y",
+    "int",
+    "86",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig",
+      17
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_MUTEXES",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig",
+      24
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_MUTEX_FORCE_DISABLE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_BUFFER_SIZE",
+    "y",
+    "int",
+    "16",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig",
+      38
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_BOOT_MODE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_BOOTLOADER_INFO",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      20
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_BOOTLOADER_INFO_TYPE_MCUBOOT",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      21
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_BOOTLOADER_INFO_INIT_PRIORITY",
+    "y",
+    "int",
+    "87",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig.blinfo",
+      36
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_BOOTLOADER_INFO_OUTPUT_FUNCTION",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig.blinfo",
+      43
+    ]
+  ],
+  [
     "CONFIG_RTIO",
     "y",
     "bool",
@@ -11923,6 +12971,17 @@
     ]
   ],
   [
+    "CONFIG_KERNEL_SHELL_REBOOT_DELAY",
+    "y",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/shell/modules/kernel_service/Kconfig",
+      22
+    ]
+  ],
+  [
     "CONFIG_KERNEL_THREAD_SHELL",
     "n",
     "bool",
@@ -12052,6 +13111,39 @@
   ],
   [
     "CONFIG_STREAM_FLASH",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
+      23
+    ]
+  ],
+  [
+    "CONFIG_STREAM_FLASH_INSPECT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/storage/stream/Kconfig",
+      16
+    ]
+  ],
+  [
+    "CONFIG_STREAM_FLASH_POST_WRITE_CALLBACK",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/storage/stream/Kconfig",
+      26
+    ]
+  ],
+  [
+    "CONFIG_STREAM_FLASH_ERASE",
     "y",
     "bool",
     null,

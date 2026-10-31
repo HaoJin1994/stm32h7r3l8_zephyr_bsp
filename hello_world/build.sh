@@ -5,8 +5,9 @@
 OVERLAYS="app.overlay"
 CONFIGS="prj.conf"
 
-# mcuboot 模块
-#CONFIGS="${CONFIGS};modules/mcuboot/mcuboot.conf"
+# ota 模块
+CONFIGS="${CONFIGS};modules/ota/ota.conf"
+OVERLAYS="${OVERLAYS};modules/ota/ota.overlay"
 
 # led  模块
 #OVERLAYS="${OVERLAYS};modules/led/led.overlay"

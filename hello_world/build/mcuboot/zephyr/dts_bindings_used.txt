@@ -97,6 +97,8 @@
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/mmu_mpu/arm,armv7m-mpu.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/base/zephyr,memory-region.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/base/zephyr,memory-common.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/retained_mem/zephyr,retained-ram.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/retention/zephyr,retention.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/clock/st,stm32-hse-clock.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/clock/fixed-clock.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/clock/st,stm32h7-hsi-clock.yaml

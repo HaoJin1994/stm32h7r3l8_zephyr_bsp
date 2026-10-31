@@ -365,18 +365,63 @@
     ]
   ],
   [
-    "CONFIG_BOOT_SHARE_BACKEND_DISABLED",
-    "y",
+    "CONFIG_BOOT_SHARE_BACKEND_AVAILABLE",
+    "n",
     "bool",
     "y",
-    "default",
+    "select",
     [
-      "/home/ubuntu/work/zephyr/bootloader/mcuboot/boot/zephyr/Kconfig",
-      924
+      "BOOT_SHARE_BACKEND_RETENTION && RETENTION && <choice BOOT_SHARE_BACKEND>"
     ]
   ],
   [
+    "CONFIG_BOOT_SHARE_BACKEND_DISABLED",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_BOOT_SHARE_BACKEND_RETENTION",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    null
+  ],
+  [
     "CONFIG_BOOT_SHARE_BACKEND_EXTERNAL",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_BOOT_SHARE_DATA",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild/mcuboot.conf",
+      19
+    ]
+  ],
+  [
+    "CONFIG_BOOT_SHARE_DATA_BOOTINFO",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild/mcuboot.conf",
+      20
+    ]
+  ],
+  [
+    "CONFIG_MEASURED_BOOT",
     "y",
     "bool",
     null,
@@ -1144,6 +1189,28 @@
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
       18903
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ZEPHYR_RETAINED_RAM_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
+      19073
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ZEPHYR_RETENTION_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
+      19083
     ]
   ],
   [
@@ -5859,9 +5926,115 @@
     "CONFIG_RETAINED_MEM",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild/mcuboot.conf",
+      17
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_INIT_PRIORITY",
+    "y",
+    "int",
+    "40",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/retained_mem/Kconfig",
+      14
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_MUTEXES",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/retained_mem/Kconfig",
+      20
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_MUTEX_FORCE_DISABLE",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_RETAINED_MEM_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETAINED_MEM_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETAINED_MEM_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETAINED_MEM_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETAINED_MEM_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETAINED_MEM_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_LOG_LEVEL",
+    "n",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_RETAINED_MEM_ZEPHYR_RAM",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/retained_mem/Kconfig.zephyr",
+      6
+    ]
   ],
   [
     "CONFIG_RTC",
@@ -7260,6 +7433,78 @@
     "CONFIG_CRC",
     "y",
     "bool",
+    "y",
+    "imply",
+    [
+      "RETENTION && RETAINED_MEM && DT_HAS_ZEPHYR_RETENTION_ENABLED"
+    ]
+  ],
+  [
+    "CONFIG_CRC_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_CRC_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_CRC_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_CRC_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_CRC_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_CRC_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_CRC_LOG_LEVEL",
+    "n",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_CRC32_K_4_2_TABLE_256",
+    "y",
+    "bool",
     null,
     "unset",
     null
@@ -7967,6 +8212,136 @@
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_RETENTION",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild/mcuboot.conf",
+      18
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_INIT_PRIORITY",
+    "y",
+    "int",
+    "86",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig",
+      17
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_MUTEXES",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig",
+      24
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_MUTEX_FORCE_DISABLE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_BUFFER_SIZE",
+    "y",
+    "int",
+    "16",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/retention/Kconfig",
+      38
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_BOOT_MODE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_BOOTLOADER_INFO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_RETENTION_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_RETENTION_LOG_LEVEL",
+    "n",
+    "int",
+    "0",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
   ],
   [
     "CONFIG_RTIO",

@@ -152,6 +152,12 @@
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/usb/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/usb/common/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/usb/common/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/crc/CMakeFiles/subsys__crc.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/crc/CMakeFiles/edit_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/crc/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/retention/CMakeFiles/subsys__retention.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/retention/CMakeFiles/edit_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/subsys/retention/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/firmware/CMakeFiles/edit_cache.dir
@@ -192,6 +198,9 @@
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/reset/CMakeFiles/drivers__reset.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/reset/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/reset/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/retained_mem/CMakeFiles/drivers__retained_mem.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/retained_mem/CMakeFiles/edit_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/retained_mem/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/serial/CMakeFiles/drivers__serial.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/serial/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/zephyr/drivers/serial/CMakeFiles/rebuild_cache.dir

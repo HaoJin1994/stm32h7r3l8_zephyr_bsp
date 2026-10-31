@@ -817,6 +817,38 @@
     ],
     [
         [
+            "ssize_t retained_mem_size",
+            "const struct device *dev"
+        ],
+        "retained_mem.h",
+        true
+    ],
+    [
+        [
+            "int retained_mem_read",
+            "const struct device *dev, off_t offset, uint8_t *buffer, size_t size"
+        ],
+        "retained_mem.h",
+        true
+    ],
+    [
+        [
+            "int retained_mem_write",
+            "const struct device *dev, off_t offset, const uint8_t *buffer, size_t size"
+        ],
+        "retained_mem.h",
+        true
+    ],
+    [
+        [
+            "int retained_mem_clear",
+            "const struct device *dev"
+        ],
+        "retained_mem.h",
+        true
+    ],
+    [
+        [
             "int uart_err_check",
             "const struct device *dev"
         ],
@@ -4045,38 +4077,6 @@
             "const struct device *dev, uint32_t channel, pwm_flags_t flags, uint32_t *period, uint32_t *pulse, k_timeout_t timeout"
         ],
         "pwm.h",
-        false
-    ],
-    [
-        [
-            "ssize_t retained_mem_size",
-            "const struct device *dev"
-        ],
-        "retained_mem.h",
-        false
-    ],
-    [
-        [
-            "int retained_mem_read",
-            "const struct device *dev, off_t offset, uint8_t *buffer, size_t size"
-        ],
-        "retained_mem.h",
-        false
-    ],
-    [
-        [
-            "int retained_mem_write",
-            "const struct device *dev, off_t offset, const uint8_t *buffer, size_t size"
-        ],
-        "retained_mem.h",
-        false
-    ],
-    [
-        [
-            "int retained_mem_clear",
-            "const struct device *dev"
-        ],
-        "retained_mem.h",
         false
     ],
     [

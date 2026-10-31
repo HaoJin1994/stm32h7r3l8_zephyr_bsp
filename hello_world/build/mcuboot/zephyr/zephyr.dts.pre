@@ -6047,6 +6047,28 @@ zephyr_udc0: &usbotg_hs {
         zephyr,code-partition = &boot_partition;
         zephyr,flash-controller = &flash;
         zephyr,flash = &flash0;
+        zephyr,bootloader-info = &retention0;
+    };
+    sram1_ret: memory@30000000 {
+        compatible = "zephyr,memory-region", "mmio-sram";
+        reg = <0x30000000 ((1) * 1024)>;
+        zephyr,memory-region = "RetainedMem";
+        status = "okay";
+
+        retainedmem {
+            compatible = "zephyr,retained-ram";
+            status = "okay";
+            #address-cells = <1>;
+            #size-cells = <1>;
+
+            retention0: retention@0 {
+                compatible = "zephyr,retention";
+                status = "okay";
+                reg = <0x0 0x40>;
+                prefix = [04 fa];
+                checksum = <1>;
+            };
+        };
     };
 };
 # 0 "<command-line>" 2
