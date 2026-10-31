@@ -1,5 +1,7 @@
 SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 {
+	Z_LINK_ITERABLE(entropy_driver_api);
+	PLACE_SYMBOL_HERE(_entropy_driver_api_ext_end);
 	Z_LINK_ITERABLE(flash_driver_api);
 	PLACE_SYMBOL_HERE(_flash_driver_api_ext_end);
 	Z_LINK_ITERABLE(gpio_driver_api);
@@ -66,8 +68,6 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_fuel_gauge_emul_driver_api_ext_end);
 	Z_LINK_ITERABLE(emul_sensor_driver_api);
 	PLACE_SYMBOL_HERE(_emul_sensor_driver_api_ext_end);
-	Z_LINK_ITERABLE(entropy_driver_api);
-	PLACE_SYMBOL_HERE(_entropy_driver_api_ext_end);
 	Z_LINK_ITERABLE(espi_driver_api);
 	Z_LINK_ITERABLE(emul_espi_driver_api);
 	PLACE_SYMBOL_HERE(_emul_espi_driver_api_ext_end);

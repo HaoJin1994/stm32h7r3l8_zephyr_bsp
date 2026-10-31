@@ -78,6 +78,8 @@ linker.cmd: \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/linker/kobject-rom.ld \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/linker/cplusplus-rom.ld \
  /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/include/generated/snippets-ram-sections.ld \
+ /home/ubuntu/work/zephyr/zephyr/include/../arch/common/nocache.ld \
+ /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/include/generated/snippets-nocache-section.ld \
  /home/ubuntu/work/zephyr/zephyr/include/../arch/common/ramfunc.ld \
  /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/include/generated/snippets-ramfunc-section.ld \
  /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/include/generated/snippets-rwdata.ld \

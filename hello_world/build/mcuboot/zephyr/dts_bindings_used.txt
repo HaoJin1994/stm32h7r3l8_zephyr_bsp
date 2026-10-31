@@ -74,11 +74,6 @@
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/reserved-memory/memory-region.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/mdio/snps,dwmac-mdio.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/mdio/mdio-controller.yaml
-/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/ethernet-phy.yaml
-/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/common/ethernet-phy-common.yaml
-/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/common/ethernet-phy-default-speeds.yaml
-/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/common/ethernet-phy-reset-gpios.yaml
-/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/phy.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/snps,dwmac-ptp-clock.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/usb/st,stm32-otgfs.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/usb/usb-controller.yaml

@@ -85,10 +85,10 @@ CMAKE_SKIP_RPATH:BOOL=NO
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-CONF_FILE:UNINITIALIZED=prj.conf
+CONF_FILE:UNINITIALIZED=prj.conf;modules/net/net.conf
 
 //No help, variable specified on the command line.
-DTC_OVERLAY_FILE:UNINITIALIZED=
+DTC_OVERLAY_FILE:UNINITIALIZED=app.overlay;modules/net/net.overlay
 
 //If desired, you can build the application with     SYSbuild configuration
 // settings specified in an alternate .conf file using this parameter.

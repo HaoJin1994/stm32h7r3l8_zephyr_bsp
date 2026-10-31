@@ -11,6 +11,7 @@
         "websocket_context"
     ],
     "__subsystem": [
+        "entropy_driver_api",
         "flash_driver_api",
         "gpio_driver_api",
         "reset_driver_api",
@@ -43,7 +44,6 @@
         "emul_bbram_driver_api",
         "fuel_gauge_emul_driver_api",
         "emul_sensor_driver_api",
-        "entropy_driver_api",
         "espi_driver_api",
         {
             "extends": "espi_driver_api",

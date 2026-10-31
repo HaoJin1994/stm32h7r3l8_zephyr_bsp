@@ -1,0 +1,6 @@
+config MODULE_ETH
+    bool "Enable Ethernet module"
+    default n
+    depends on CONFIG_NET_IPV4 && CONFIG_NETWORKING
+    help
+        Enable Ethernet module.

@@ -2,7 +2,7 @@
 
 # 读取模块配置
 
-OVERLAYS=""
+OVERLAYS="app.overlay"
 CONFIGS="prj.conf"
 
 # mcuboot 模块
@@ -35,6 +35,10 @@ CONFIGS="prj.conf"
 #dac 模块
 #OVERLAYS="${OVERLAYS};modules/dac/dac.overlay"
 #CONFIGS="${CONFIGS};modules/dac/dac.conf"
+
+#net 模块
+OVERLAYS="${OVERLAYS};modules/net/net.overlay"
+CONFIGS="${CONFIGS};modules/net/net.conf"
 
 #OVERLAYS=${OVERLAYS#;}
 

@@ -4,7 +4,7 @@ MEMORY
     {
     FLASH (rx) : ORIGIN = ((134217728)), LENGTH = ((65536) - 0x0)
     RAM (wx) : ORIGIN = (603979776), LENGTH = (466944)
-    SRAM0 ( rw ) : ORIGIN = (603979776), LENGTH = (466944) SRAM1 ( rw ) : ORIGIN = (805306368), LENGTH = (16384) DTCM ( rw ) : ORIGIN = (536870912), LENGTH = (65536) ITCM ( rw ) : ORIGIN = (0), LENGTH = (65536) EXTMEM ( rw ) : ORIGIN = (2415919104), LENGTH = (16777216)
+    SRAM0 ( rw ) : ORIGIN = (603979776), LENGTH = (466944) SRAM1 ( rw ) : ORIGIN = (805306368), LENGTH = (16384) SRAM2 ( rw ) : ORIGIN = (805322752), LENGTH = (16384) DTCM ( rw ) : ORIGIN = (536870912), LENGTH = (65536) ITCM ( rw ) : ORIGIN = (0), LENGTH = (65536) EXTMEM ( rw ) : ORIGIN = (2415919104), LENGTH = (16777216)
     IDT_LIST (wx) : ORIGIN = 0xFFFF7FFF, LENGTH = 32K
     }
 ENTRY("__start")
@@ -541,7 +541,7 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
  KEEP(*(.ARM.attributes))
  KEEP(*(.gnu.attributes))
  }
-    SRAM0 (NOLOAD) : { __SRAM0_start = .; KEEP(*(SRAM0)) KEEP(*(SRAM0.*)) __SRAM0_end = .; } > SRAM0 __SRAM0_size = __SRAM0_end - __SRAM0_start; __SRAM0_load_start = LOADADDR(SRAM0); SRAM1 (NOLOAD) : { __SRAM1_start = .; KEEP(*(SRAM1)) KEEP(*(SRAM1.*)) __SRAM1_end = .; } > SRAM1 __SRAM1_size = __SRAM1_end - __SRAM1_start; __SRAM1_load_start = LOADADDR(SRAM1); DTCM (NOLOAD) : { __DTCM_start = .; KEEP(*(DTCM)) KEEP(*(DTCM.*)) __DTCM_end = .; } > DTCM __DTCM_size = __DTCM_end - __DTCM_start; __DTCM_load_start = LOADADDR(DTCM); ITCM (NOLOAD) : { __ITCM_start = .; KEEP(*(ITCM)) KEEP(*(ITCM.*)) __ITCM_end = .; } > ITCM __ITCM_size = __ITCM_end - __ITCM_start; __ITCM_load_start = LOADADDR(ITCM); EXTMEM (NOLOAD) : { __EXTMEM_start = .; KEEP(*(EXTMEM)) KEEP(*(EXTMEM.*)) __EXTMEM_end = .; } > EXTMEM __EXTMEM_size = __EXTMEM_end - __EXTMEM_start; __EXTMEM_load_start = LOADADDR(EXTMEM);
+    SRAM0 (NOLOAD) : { __SRAM0_start = .; KEEP(*(SRAM0)) KEEP(*(SRAM0.*)) __SRAM0_end = .; } > SRAM0 __SRAM0_size = __SRAM0_end - __SRAM0_start; __SRAM0_load_start = LOADADDR(SRAM0); SRAM1 (NOLOAD) : { __SRAM1_start = .; KEEP(*(SRAM1)) KEEP(*(SRAM1.*)) __SRAM1_end = .; } > SRAM1 __SRAM1_size = __SRAM1_end - __SRAM1_start; __SRAM1_load_start = LOADADDR(SRAM1); SRAM2 (NOLOAD) : { __SRAM2_start = .; KEEP(*(SRAM2)) KEEP(*(SRAM2.*)) __SRAM2_end = .; } > SRAM2 __SRAM2_size = __SRAM2_end - __SRAM2_start; __SRAM2_load_start = LOADADDR(SRAM2); DTCM (NOLOAD) : { __DTCM_start = .; KEEP(*(DTCM)) KEEP(*(DTCM.*)) __DTCM_end = .; } > DTCM __DTCM_size = __DTCM_end - __DTCM_start; __DTCM_load_start = LOADADDR(DTCM); ITCM (NOLOAD) : { __ITCM_start = .; KEEP(*(ITCM)) KEEP(*(ITCM.*)) __ITCM_end = .; } > ITCM __ITCM_size = __ITCM_end - __ITCM_start; __ITCM_load_start = LOADADDR(ITCM); EXTMEM (NOLOAD) : { __EXTMEM_start = .; KEEP(*(EXTMEM)) KEEP(*(EXTMEM.*)) __EXTMEM_end = .; } > EXTMEM __EXTMEM_size = __EXTMEM_end - __EXTMEM_start; __EXTMEM_load_start = LOADADDR(EXTMEM);
 .last_section :
 {
   KEEP(*(.last_section))

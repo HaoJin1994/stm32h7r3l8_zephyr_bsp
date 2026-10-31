@@ -45,6 +45,7 @@ case K_OBJ_ADC_DECODER_API: ret = "adc_decoder_api"; break;
 case K_OBJ_SENSOR_DECODER_API: ret = "sensor_decoder_api"; break;
 #endif
 /* Driver subsystems */
+case K_OBJ_DRIVER_ENTROPY: ret = "entropy driver"; break;
 case K_OBJ_DRIVER_FLASH: ret = "flash driver"; break;
 case K_OBJ_DRIVER_GPIO: ret = "gpio driver"; break;
 case K_OBJ_DRIVER_RESET: ret = "reset driver"; break;
@@ -77,7 +78,6 @@ case K_OBJ_DRIVER_EEPROM: ret = "eeprom driver"; break;
 case K_OBJ_DRIVER_EMUL_BBRAM: ret = "emul_bbram driver"; break;
 case K_OBJ_DRIVER_FUEL_GAUGE_EMUL: ret = "fuel_gauge_emul driver"; break;
 case K_OBJ_DRIVER_EMUL_SENSOR: ret = "emul_sensor driver"; break;
-case K_OBJ_DRIVER_ENTROPY: ret = "entropy driver"; break;
 case K_OBJ_DRIVER_ESPI: ret = "espi driver"; break;
 case K_OBJ_DRIVER_EMUL_ESPI: ret = "emul_espi driver"; break;
 case K_OBJ_DRIVER_ESPI_SAF: ret = "espi_saf driver"; break;

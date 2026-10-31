@@ -39,12 +39,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/subsys/portability/posix/eventfd/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/subsys/portability/posix/c_lang_support_r/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/subsys/portability/posix/c_lib_ext/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/subsys/portability/posix/options/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT

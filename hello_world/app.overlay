@@ -2,7 +2,7 @@
 
     sram_app: memory@24010000 {
         compatible = "zephyr,memory-region";
-        reg = <0x24010000 DT_SIZE_K(320)>;
+        reg = <0x24010000 DT_SIZE_K(384)>; //456KB - 64KB = 384KB
         zephyr,memory-region = "SRAM_APP";
     };
 

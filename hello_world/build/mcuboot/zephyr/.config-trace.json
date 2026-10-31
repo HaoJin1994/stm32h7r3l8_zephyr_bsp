@@ -817,17 +817,6 @@
     ]
   ],
   [
-    "CONFIG_DT_HAS_ETHERNET_PHY_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
-      3423
-    ]
-  ],
-  [
     "CONFIG_DT_HAS_FIXED_CLOCK_ENABLED",
     "n",
     "bool",
@@ -883,28 +872,6 @@
     ]
   ],
   [
-    "CONFIG_DT_HAS_SNPS_DWMAC_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
-      14228
-    ]
-  ],
-  [
-    "CONFIG_DT_HAS_SNPS_DWMAC_MDIO_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
-      14233
-    ]
-  ],
-  [
     "CONFIG_DT_HAS_SNPS_DWMAC_PTP_CLOCK_ENABLED",
     "n",
     "bool",
@@ -924,17 +891,6 @@
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
       14263
-    ]
-  ],
-  [
-    "CONFIG_DT_HAS_ST_STM32_ETHERNET_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
-      14868
     ]
   ],
   [
@@ -1100,17 +1056,6 @@
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
       15258
-    ]
-  ],
-  [
-    "CONFIG_DT_HAS_ST_STM32H7_ETHERNET_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
-      15463
     ]
   ],
   [
@@ -1404,7 +1349,7 @@
     "assign",
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild/mcuboot.conf",
-      7
+      6
     ]
   ],
   [
@@ -5428,7 +5373,7 @@
     "assign",
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/sysbuild/mcuboot.conf",
-      17
+      11
     ]
   ],
   [
