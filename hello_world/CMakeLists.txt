@@ -11,6 +11,21 @@ target_sources(app PRIVATE
     #src/sha256.c
 )
 
+if(CONFIG_MODULE_SENSOR)
+target_sources(app PRIVATE 
+    src/shell_sensor_cmd.c
+)
+endif()
+if(CONFIG_MODULE_PWM)
+target_sources(app PRIVATE 
+    src/shell_pwm_led_cmd.c
+)
+endif()
+if(CONFIG_MODULE_LED)
+target_sources(app PRIVATE 
+    src/shell_led_cmd.c
+)
+endif()
 
 target_include_directories(app PRIVATE
     include

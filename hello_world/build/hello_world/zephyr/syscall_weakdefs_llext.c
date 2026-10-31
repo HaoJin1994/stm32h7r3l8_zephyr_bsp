@@ -160,6 +160,14 @@ extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_k_timer_user_data_se
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_k_uptime_ticks;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_k_wakeup;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_k_yield;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_blink;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_get_info;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_off;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_on;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_set_brightness;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_set_channel;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_set_color;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_led_write_channels;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_log_buffered_cnt;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_log_filter_set;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_log_frontend_filter_set;
@@ -177,6 +185,11 @@ extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_net_if_ipv4_set_netm
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_net_if_ipv6_addr_add_by_index;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_net_if_ipv6_addr_lookup_by_index;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_net_if_ipv6_addr_rm_by_index;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_pwm_capture_cycles;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_pwm_disable_capture;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_pwm_enable_capture;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_pwm_get_cycles_per_sec;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_pwm_set_cycles;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_reset_line_assert;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_reset_line_deassert;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_reset_line_toggle;

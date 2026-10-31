@@ -4,7 +4,7 @@
         lfs1: lfs1 {
             compatible = "zephyr,fstab,littlefs";
             mount-point = "/lfs";
-            partition = <&littlefs_partition>;
+            partition = <&storage_partition>;
             read-size = <16>; //读操作的最小单位
             prog-size = <16>; //写操作的最小单位
             cache-size = <64>; //缓存大小
@@ -15,42 +15,7 @@
     };
 };
 
-&spi1 {
-    status = "okay";
-    pinctrl-0 = <&spi1_sck_pb3 &spi1_miso_pb4 &spi1_mosi_pb5>;
-    pinctrl-names = "default";
-    cs-gpios = <&gpiob 14 GPIO_ACTIVE_LOW>;
-
-    w25q128: w25q128@0 {
-        compatible = "jedec,spi-nor";
-        status = "okay";
-        reg = <0>;
-        spi-max-frequency = <30000000>;
-        size = <0x1000000>; /* 16MB */
-        jedec-id = [52 21 18];
-    };
-};
 
 
-&w25q128 { 
-    partitions {
-        compatible = "fixed-partitions";
-        #address-cells = <1>;
-        #size-cells = <1>;
-        data_partition: partition@0 { //大小 0x100000  1M
-            label = "data";
-            reg = <0x0 DT_SIZE_K(1024)>;
-        };
-        littlefs_partition: partition@100000 {
-            label = "littlefs";
-            reg = <0x100000 DT_SIZE_K(1024)>; //0x100000 - 0x200000
-        };
-        fatfs_partition:  partition@200000 {
-            label = "rootfs";
-            reg = <0x200000 DT_SIZE_K(1024)>; //0x200000 - 0x300000 */
-        };
 
-
-    };
-};
 

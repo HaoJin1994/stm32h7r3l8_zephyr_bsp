@@ -895,17 +895,6 @@
     ]
   ],
   [
-    "CONFIG_DT_HAS_GPIO_LEDS_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
-      3773
-    ]
-  ],
-  [
     "CONFIG_DT_HAS_MMIO_SRAM_ENABLED",
     "n",
     "bool",

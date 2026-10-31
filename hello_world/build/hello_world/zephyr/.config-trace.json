@@ -1,5 +1,27 @@
 [
   [
+    "CONFIG_MODULE_LED",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/led/led.conf",
+      2
+    ]
+  ],
+  [
+    "CONFIG_MODULE_PWM",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/pwm/pwm.conf",
+      3
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ARM_ARMV7M_MPU_ENABLED",
     "n",
     "bool",
@@ -129,6 +151,17 @@
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/Kconfig.dts",
       7003
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_PWM_LEDS_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/Kconfig.dts",
+      10928
     ]
   ],
   [
@@ -275,6 +308,17 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_ST_STM32_PWM_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/Kconfig.dts",
+      15063
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ST_STM32_RCC_RCTL_ENABLED",
     "n",
     "bool",
@@ -283,6 +327,17 @@
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/Kconfig.dts",
       15103
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ST_STM32_TIMERS_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/Kconfig.dts",
+      15168
     ]
   ],
   [
@@ -598,7 +653,8 @@
     "y",
     "select",
     [
-      "PHY_GENERIC_MII && DT_HAS_ETHERNET_PHY_ENABLED && ETH_PHY_DRIVER && ETH_DRIVER"
+      "PHY_GENERIC_MII && DT_HAS_ETHERNET_PHY_ENABLED && ETH_PHY_DRIVER && ETH_DRIVER",
+      "LED_GPIO && DT_HAS_GPIO_LEDS_ENABLED && LED"
     ]
   ],
   [
@@ -1319,6 +1375,7 @@
     "y",
     "select",
     [
+      "PWM_STM32 && DT_HAS_ST_STM32_PWM_ENABLED && PWM",
       "UART_STM32 && DT_HAS_ST_STM32_UART_ENABLED && SERIAL"
     ]
   ],
@@ -2207,7 +2264,7 @@
     "CONFIG_MCUBOOT_IMGTOOL_SIGN_VERSION",
     "y",
     "string",
-    "1.0.1",
+    "1.0.4",
     "assign",
     [
       "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf",
@@ -5225,9 +5282,53 @@
     "CONFIG_LED",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/pwm/pwm.conf",
+      1
+    ]
+  ],
+  [
+    "CONFIG_LED_INIT_PRIORITY",
+    "y",
+    "int",
+    "90",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/led/Kconfig",
+      19
+    ]
+  ],
+  [
+    "CONFIG_LED_SHELL",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_LED_GPIO",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/aknw_h7rsx/hello_world/modules/pwm/pwm.conf",
+      2
+    ]
+  ],
+  [
+    "CONFIG_LED_PWM",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/led/Kconfig.pwm",
+      6
+    ]
   ],
   [
     "CONFIG_LED_STRIP",
@@ -5327,6 +5428,7 @@
       "ETH_STM32_HAL && DT_HAS_ST_STM32_ETHERNET_ENABLED && ETH_DRIVER",
       "MDIO_ST_STM32_HAL && DT_HAS_SNPS_DWMAC_MDIO_ENABLED && ETH_STM32_HAL && MDIO",
       "FLASH_STM32_XSPI && DT_HAS_ST_STM32_XSPI_ENABLED && DT_HAS_ST_STM32_XSPI_NOR_ENABLED && FLASH",
+      "PWM_STM32 && DT_HAS_ST_STM32_PWM_ENABLED && PWM",
       "UART_STM32 && DT_HAS_ST_STM32_UART_ENABLED && SERIAL"
     ]
   ],
@@ -5412,9 +5514,68 @@
     "CONFIG_PWM",
     "y",
     "bool",
+    "y",
+    "select",
+    [
+      "LED_PWM && DT_HAS_PWM_LEDS_ENABLED && LED"
+    ]
+  ],
+  [
+    "CONFIG_PWM_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/pwm/Kconfig",
+      19
+    ]
+  ],
+  [
+    "CONFIG_PWM_SHELL",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_PWM_CAPTURE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_EVENT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_TC_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/pwm/Kconfig.sam0_tc",
+      15
+    ]
+  ],
+  [
+    "CONFIG_PWM_STM32",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/pwm/Kconfig.stm32",
+      8
+    ]
   ],
   [
     "CONFIG_RESET_STM32",

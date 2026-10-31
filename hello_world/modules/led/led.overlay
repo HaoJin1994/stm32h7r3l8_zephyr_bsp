@@ -6,7 +6,7 @@
         //     gpios = <&gpiof 9 GPIO_ACTIVE_LOW>;
         // };
         led_1: led_1 {
-            gpios = <&gpiof 10 GPIO_ACTIVE_LOW>;
+            gpios = <&gpioc 0 GPIO_ACTIVE_LOW>;
         };
     };
     aliases {

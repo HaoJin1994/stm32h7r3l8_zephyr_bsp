@@ -284,11 +284,17 @@
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/hwinfo/CMakeFiles/drivers__hwinfo.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/hwinfo/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/hwinfo/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/led/CMakeFiles/drivers__led.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/led/CMakeFiles/edit_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/led/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pinctrl/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pinctrl/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pinctrl/renesas/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pinctrl/renesas/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pwm/CMakeFiles/drivers__pwm.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pwm/CMakeFiles/edit_cache.dir
+/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/pwm/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/reset/CMakeFiles/drivers__reset.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/reset/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/drivers/reset/CMakeFiles/rebuild_cache.dir

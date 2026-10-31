@@ -1,0 +1,14 @@
+/ {
+    w1: w1 {
+            compatible = "zephyr,w1-gpio";
+            /* Configure pin as open-drain with internal pull-up resistor. */
+            gpios = <&gpiog 15 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
+            status = "okay";
+            ds18b20 {
+                compatible = "maxim,ds18b20";
+                family-code = <0x28>;
+                resolution = <12>;
+                status = "okay";
+            };
+    };
+};

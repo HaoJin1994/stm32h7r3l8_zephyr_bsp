@@ -122,6 +122,10 @@ device_api_area : SUBALIGN(4)
  _flash_driver_api_ext_end = .;
  _gpio_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._gpio_driver_api.static.*))); _gpio_driver_api_list_end = .;;
  _gpio_driver_api_ext_end = .;
+ _led_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_driver_api.static.*))); _led_driver_api_list_end = .;;
+ _led_driver_api_ext_end = .;
+ _pwm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pwm_driver_api.static.*))); _pwm_driver_api_list_end = .;;
+ _pwm_driver_api_ext_end = .;
  _reset_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._reset_driver_api.static.*))); _reset_driver_api_list_end = .;;
  _reset_driver_api_ext_end = .;
  _retained_mem_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._retained_mem_driver_api.static.*))); _retained_mem_driver_api_list_end = .;;
@@ -212,8 +216,6 @@ device_api_area : SUBALIGN(4)
  _i2s_driver_api_ext_end = .;
  _ipm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._ipm_driver_api.static.*))); _ipm_driver_api_list_end = .;;
  _ipm_driver_api_ext_end = .;
- _led_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_driver_api.static.*))); _led_driver_api_list_end = .;;
- _led_driver_api_ext_end = .;
  _led_strip_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_strip_driver_api.static.*))); _led_strip_driver_api_list_end = .;;
  _led_strip_driver_api_ext_end = .;
  _lora_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._lora_driver_api.static.*))); _lora_driver_api_list_end = .;;
@@ -246,8 +248,6 @@ device_api_area : SUBALIGN(4)
  _ptp_clock_driver_api_ext_end = .;
  _pulse_io_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pulse_io_driver_api.static.*))); _pulse_io_driver_api_list_end = .;;
  _pulse_io_driver_api_ext_end = .;
- _pwm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pwm_driver_api.static.*))); _pwm_driver_api_list_end = .;;
- _pwm_driver_api_ext_end = .;
  _regulator_parent_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._regulator_parent_driver_api.static.*))); _regulator_parent_driver_api_list_end = .;;
  _regulator_parent_driver_api_ext_end = .;
  _regulator_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._regulator_driver_api.static.*))); _regulator_driver_api_list_end = .;;

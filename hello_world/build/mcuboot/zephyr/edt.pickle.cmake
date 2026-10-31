@@ -13,8 +13,6 @@ set_target_properties(${DEVICETREE_TARGET}
     "DT_ALIAS|rtc" "/soc/rtc@58004000"
     "DT_ALIAS|spi-flash0" "/soc/spi@52005000/xspi-nor-flash@0"
     "DT_ALIAS|watchdog0" "/soc/watchdog@58004800"
-    "DT_ALIAS|led2" "/leds/led_1"
-    "DT_ALIAS|led0" "/leds/led_2"
     "DT_ALIAS|sw0" "/gpio_keys/button_0"
     "DT_NODE|/" TRUE
     "DT_PROP|/|compatible" "st,stm32h7r3"
@@ -2841,27 +2839,6 @@ set_target_properties(${DEVICETREE_TARGET}
     "DT_REG|/vddcore|ADDR" ""
     "DT_REG|/vddcore|SIZE" ""
     "DT_UNIT_ADDR|/vddcore" "NONE"
-    "DT_NODE|/leds" TRUE
-    "DT_NODELABEL|leds" "/leds"
-    "DT_PROP|/leds|compatible" "gpio-leds"
-    "DT_REG|/leds|NUM" "0"
-    "DT_REG|/leds|ADDR" ""
-    "DT_REG|/leds|SIZE" ""
-    "DT_UNIT_ADDR|/leds" "NONE"
-    "DT_NODE|/leds/led_1" TRUE
-    "DT_NODELABEL|red_led" "/leds/led_1"
-    "DT_PROP|/leds/led_1|label" "User LD1"
-    "DT_REG|/leds/led_1|NUM" "0"
-    "DT_REG|/leds/led_1|ADDR" ""
-    "DT_REG|/leds/led_1|SIZE" ""
-    "DT_UNIT_ADDR|/leds/led_1" "NONE"
-    "DT_NODE|/leds/led_2" TRUE
-    "DT_NODELABEL|green_led" "/leds/led_2"
-    "DT_PROP|/leds/led_2|label" "User LD2"
-    "DT_REG|/leds/led_2|NUM" "0"
-    "DT_REG|/leds/led_2|ADDR" ""
-    "DT_REG|/leds/led_2|SIZE" ""
-    "DT_UNIT_ADDR|/leds/led_2" "NONE"
     "DT_NODE|/gpio_keys" TRUE
     "DT_PROP|/gpio_keys|debounce-interval-ms" "30"
     "DT_PROP|/gpio_keys|polling-mode" "False"
@@ -2977,6 +2954,5 @@ set_target_properties(${DEVICETREE_TARGET}
     "DT_COMP|st,stm32-vbat" "/vbat"
     "DT_COMP|st,stm32-vref" "/vref"
     "DT_COMP|st,stm32-vddcore" "/vddcore"
-    "DT_COMP|gpio-leds" "/leds"
     "DT_COMP|gpio-keys" "/gpio_keys"
 )

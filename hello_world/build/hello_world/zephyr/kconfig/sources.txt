@@ -12,7 +12,9 @@
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/soc/Kconfig
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/soc/Kconfig.defconfig
 /home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/Kconfig/soc/Kconfig.soc
+/home/ubuntu/work/aknw_h7rsx/hello_world/modules/led/Kconfig
 /home/ubuntu/work/aknw_h7rsx/hello_world/modules/net/Kconfig
+/home/ubuntu/work/aknw_h7rsx/hello_world/modules/pwm/Kconfig
 /home/ubuntu/work/zephyr/modules/hal/intel/zephyr/Kconfig
 /home/ubuntu/work/zephyr/modules/hal/intel/zephyr/bsp_sedi/Kconfig
 /home/ubuntu/work/zephyr/modules/hal/intel/zephyr/subsys/logging/backends/Kconfig.i2c

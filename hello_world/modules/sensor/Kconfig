@@ -1,0 +1,6 @@
+config MODULE_SENSOR
+    bool "Enable sensor module"
+    default n
+    depends on SENSOR && W1
+    help
+    Enable sensor module

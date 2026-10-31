@@ -15,6 +15,8 @@ cmake:
      - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app.dts'
      - 'app.overlay'
      - 'modules/ota/ota.overlay'
+     - 'modules/led/led.overlay'
+     - 'modules/pwm/pwm.overlay'
      - 'modules/net/net.overlay'
     include-dirs:
      - '/home/ubuntu/work/zephyr/modules/hal/ambiq/dts'
@@ -46,17 +48,23 @@ cmake:
     user-files:
      - 'app.overlay'
      - 'modules/ota/ota.overlay'
+     - 'modules/led/led.overlay'
+     - 'modules/pwm/pwm.overlay'
      - 'modules/net/net.overlay'
   kconfig:
     files:
      - '/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3_ext_flash_app_defconfig'
      - '/home/ubuntu/work/aknw_h7rsx/hello_world/prj.conf'
      - '/home/ubuntu/work/aknw_h7rsx/hello_world/modules/ota/ota.conf'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/modules/led/led.conf'
+     - '/home/ubuntu/work/aknw_h7rsx/hello_world/modules/pwm/pwm.conf'
      - '/home/ubuntu/work/aknw_h7rsx/hello_world/modules/net/net.conf'
      - '/home/ubuntu/work/aknw_h7rsx/hello_world/build/hello_world/zephyr/.config.sysbuild'
     user-files:
      - 'prj.conf'
      - 'modules/ota/ota.conf'
+     - 'modules/led/led.conf'
+     - 'modules/pwm/pwm.conf'
      - 'modules/net/net.conf'
   toolchain:
     name: 'zephyr'

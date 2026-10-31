@@ -5813,21 +5813,7 @@
   zephyr,sram = &sram0;
 
  };
-
- leds: leds {
-  compatible = "gpio-leds";
-
-  red_led: led_1 {
-   gpios = <&gpiod 14 (1 << 0)>;
-   label = "User LD1";
-  };
-
-  green_led: led_2 {
-   gpios = <&gpioc 0 (1 << 0)>;
-   label = "User LD2";
-  };
- };
-
+# 36 "/home/ubuntu/work/aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi"
  gpio_keys {
   compatible = "gpio-keys";
 
@@ -5839,8 +5825,8 @@
  };
 
  aliases {
-  led0 = &green_led;
-  led2 = &red_led;
+
+
   sw0 = &user_button;
   watchdog0 = &iwdg;
   spi-flash0 = &w25q128;
@@ -6082,6 +6068,45 @@ zephyr_udc0: &usbotg_hs {
    };
   };
  };
+};
+# 0 "<command-line>" 2
+# 1 "./modules/led/led.overlay" 1
+/{
+    leds {
+        compatible = "gpio-leds";
+        status = "okay";
+
+
+
+        led_1: led_1 {
+            gpios = <&gpioc 0 (1 << 0)>;
+        };
+    };
+    aliases {
+
+        led1 = &led_1;
+    };
+};
+# 0 "<command-line>" 2
+# 1 "./modules/pwm/pwm.overlay" 1
+&timers4 {
+    status = "okay";
+
+    pwm4: pwm {
+        status = "okay";
+        pinctrl-0 = <&tim4_ch3_pd14>;
+        pinctrl-names = "default";
+    };
+};
+
+/{
+    pwmleds: pwmleds {
+        compatible = "pwm-leds";
+        status = "okay";
+        red_pwm_led: red_pwm_led {
+            pwms = <&pwm4 3 ((100) * 1000UL) (1 << 0)>;
+        };
+    };
 };
 # 0 "<command-line>" 2
 # 1 "./modules/net/net.overlay" 1

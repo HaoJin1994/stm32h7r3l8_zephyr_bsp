@@ -6,6 +6,10 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_flash_driver_api_ext_end);
 	Z_LINK_ITERABLE(gpio_driver_api);
 	PLACE_SYMBOL_HERE(_gpio_driver_api_ext_end);
+	Z_LINK_ITERABLE(led_driver_api);
+	PLACE_SYMBOL_HERE(_led_driver_api_ext_end);
+	Z_LINK_ITERABLE(pwm_driver_api);
+	PLACE_SYMBOL_HERE(_pwm_driver_api_ext_end);
 	Z_LINK_ITERABLE(reset_driver_api);
 	PLACE_SYMBOL_HERE(_reset_driver_api_ext_end);
 	Z_LINK_ITERABLE(retained_mem_driver_api);
@@ -96,8 +100,6 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_i2s_driver_api_ext_end);
 	Z_LINK_ITERABLE(ipm_driver_api);
 	PLACE_SYMBOL_HERE(_ipm_driver_api_ext_end);
-	Z_LINK_ITERABLE(led_driver_api);
-	PLACE_SYMBOL_HERE(_led_driver_api_ext_end);
 	Z_LINK_ITERABLE(led_strip_driver_api);
 	PLACE_SYMBOL_HERE(_led_strip_driver_api_ext_end);
 	Z_LINK_ITERABLE(lora_driver_api);
@@ -130,8 +132,6 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_ptp_clock_driver_api_ext_end);
 	Z_LINK_ITERABLE(pulse_io_driver_api);
 	PLACE_SYMBOL_HERE(_pulse_io_driver_api_ext_end);
-	Z_LINK_ITERABLE(pwm_driver_api);
-	PLACE_SYMBOL_HERE(_pwm_driver_api_ext_end);
 	Z_LINK_ITERABLE(regulator_parent_driver_api);
 	PLACE_SYMBOL_HERE(_regulator_parent_driver_api_ext_end);
 	Z_LINK_ITERABLE(regulator_driver_api);

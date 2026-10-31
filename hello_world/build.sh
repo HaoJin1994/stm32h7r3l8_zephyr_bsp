@@ -9,17 +9,21 @@ CONFIGS="prj.conf"
 CONFIGS="${CONFIGS};modules/ota/ota.conf"
 OVERLAYS="${OVERLAYS};modules/ota/ota.overlay"
 
+# sensor 模块
+#CONFIGS="${CONFIGS};modules/sensor/sensor.conf"
+#OVERLAYS="${OVERLAYS};modules/sensor/sensor.overlay"
+
 # led  模块
-#OVERLAYS="${OVERLAYS};modules/led/led.overlay"
-#CONFIGS="${CONFIGS};modules/led/led.conf"
+OVERLAYS="${OVERLAYS};modules/led/led.overlay"
+CONFIGS="${CONFIGS};modules/led/led.conf"
 
 # cdc_acm 模块
 #OVERLAYS="${OVERLAYS};modules/cdc_acm/cdc_acm.overlay"
 #CONFIGS="${CONFIGS};modules/cdc_acm/cdc_acm.conf"
 
 # pwm led模块
-#OVERLAYS="${OVERLAYS};modules/pwm/pwm.overlay"
-#CONFIGS="${CONFIGS};modules/pwm/pwm.conf"
+OVERLAYS="${OVERLAYS};modules/pwm/pwm.overlay"
+CONFIGS="${CONFIGS};modules/pwm/pwm.conf"
 
 #spi_flash 模块
 #OVERLAYS="${OVERLAYS};modules/spi_flash/spi_flash.overlay"

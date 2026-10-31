@@ -23,6 +23,6 @@ cmake:
   sysbuild: 'true'
 version: '0.1.0'
 west:
-  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b aknw_stm32h7r3/stm32h7r3xx/ext_flash_app --sysbuild -p always -- -DBOARD_ROOT=/home/ubuntu/work/aknw_h7rsx/ -DDTC_OVERLAY_FILE=app.overlay;modules/ota/ota.overlay;modules/net/net.overlay -DCONF_FILE=prj.conf;modules/ota/ota.conf;modules/net/net.conf'
+  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b aknw_stm32h7r3/stm32h7r3xx/ext_flash_app --sysbuild -p always -- -DBOARD_ROOT=/home/ubuntu/work/aknw_h7rsx/ -DDTC_OVERLAY_FILE=app.overlay;modules/ota/ota.overlay;modules/led/led.overlay;modules/pwm/pwm.overlay;modules/net/net.overlay -DCONF_FILE=prj.conf;modules/ota/ota.conf;modules/led/led.conf;modules/pwm/pwm.conf;modules/net/net.conf'
   topdir: '/home/ubuntu/work/zephyr'
   version: '1.5.0'

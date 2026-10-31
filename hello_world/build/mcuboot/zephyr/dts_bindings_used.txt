@@ -117,5 +117,4 @@
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/sensor/st,stm32-vbat.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/sensor/st,stm32-vref.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/sensor/st,stm32-vddcore.yaml
-/home/ubuntu/work/zephyr/zephyr/dts/bindings/led/gpio-leds.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/input/gpio-keys.yaml

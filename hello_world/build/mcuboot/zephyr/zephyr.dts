@@ -23,8 +23,6 @@
 
 	/* node '/aliases' defined in zephyr/dts/common/skeleton.dtsi:15 */
 	aliases {
-		led0 = &green_led;     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:47 */
-		led2 = &red_led;       /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:48 */
 		sw0 = &user_button;    /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:49 */
 		watchdog0 = &iwdg;     /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:50 */
 		spi-flash0 = &w25q128; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:51 */
@@ -256,7 +254,7 @@
 				#gpio-cells = < 0x2 >;        /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:306 */
 				reg = < 0x58020800 0x400 >;   /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:307 */
 				clocks = < &rcc 0x140 0x4 >;  /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:308 */
-				phandle = < 0x23 >;           /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:31 */
+				phandle = < 0x22 >;           /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:41 */
 			};
 
 			/* node '/soc/pin-controller@58020000/gpio@58020c00' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:311 */
@@ -266,7 +264,6 @@
 				#gpio-cells = < 0x2 >;        /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:314 */
 				reg = < 0x58020c00 0x400 >;   /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:315 */
 				clocks = < &rcc 0x140 0x8 >;  /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:316 */
-				phandle = < 0x22 >;           /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:26 */
 			};
 
 			/* node '/soc/pin-controller@58020000/gpio@58021000' defined in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:319 */
@@ -1923,23 +1920,6 @@
 		compatible = "st,stm32-vddcore"; /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1379 */
 		io-channels = < &adc2 0x11 >;    /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1380 */
 		status = "disabled";             /* in zephyr/dts/arm/st/h7rs/stm32h7rs.dtsi:1381 */
-	};
-
-	/* node '/leds' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:22 */
-	leds: leds {
-		compatible = "gpio-leds"; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:23 */
-
-		/* node '/leds/led_1' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:25 */
-		red_led: led_1 {
-			gpios = < &gpiod 0xe 0x1 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:26 */
-			label = "User LD1";         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:27 */
-		};
-
-		/* node '/leds/led_2' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:30 */
-		green_led: led_2 {
-			gpios = < &gpioc 0x0 0x1 >; /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:31 */
-			label = "User LD2";         /* in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:32 */
-		};
 	};
 
 	/* node '/gpio_keys' defined in ../aknw_h7rsx/boards/st/aknw_stm32h7r3/aknw_stm32h7r3-common.dtsi:36 */
